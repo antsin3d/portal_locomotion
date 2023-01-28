@@ -35,9 +35,9 @@ public class RightHandRaycast : MonoBehaviour
     public Vector3 startScale;
     public Vector3 endScale;
     private float animationDuration;
-	public float animationDurationClose = 0.4f;
-    public float animationDurationMid = 0.6f;
-	public float animationDurationFar = 1f;
+	private float animationDurationClose;
+    private float animationDurationMid;
+	private float animationDurationFar;
     public float maxDistance = 100f;
     public LayerMask layerMask;
     private Vector3 hitPoint;
@@ -53,9 +53,18 @@ public class RightHandRaycast : MonoBehaviour
     private bool isAnimating = false;
 	float teleportDistance;
 	
+	public enum SpeedOption
+    {
+        Slow,
+        Default,
+        Quick
+    }
+	public SpeedOption portalSpeed = SpeedOption.Default;
+
 	
 private void Start()
     {
+		SetSpeedValues();
 		//save spawned portal camera position and rotation
         portalCamInitialPositionL = portalCameraL.transform.position;
         portalCamInitialRotationL = portalCameraL.transform.rotation;
@@ -68,7 +77,27 @@ private void Start()
 		initialPortalParentPositionR = portalParentR.position;
     }
 
-    
+    private void SetSpeedValues()
+    {
+        switch (portalSpeed)
+        {
+            case SpeedOption.Slow:
+                animationDurationClose = 0.8f;
+                animationDurationMid = 1f;
+                animationDurationFar = 1.4f;
+                break;
+            case SpeedOption.Default:
+                animationDurationClose = 0.4f;
+                animationDurationMid = 0.6f;
+                animationDurationFar = 1f;
+                break;
+            case SpeedOption.Quick:
+                animationDurationClose = 0.3f;
+                animationDurationMid = 0.5f;
+                animationDurationFar = 0.7f;
+                break;
+        }
+	}
 
     private void Update()
     {
