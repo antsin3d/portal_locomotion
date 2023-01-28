@@ -84,11 +84,11 @@ private void Start()
             case SpeedOption.Slow:
                 animationDurationClose = 0.8f;
                 animationDurationMid = 1f;
-                animationDurationFar = 1.4f;
+                animationDurationFar = 1.3f;
                 break;
             case SpeedOption.Default:
-                animationDurationClose = 0.4f;
-                animationDurationMid = 0.6f;
+                animationDurationClose = 0.5f;
+                animationDurationMid = 0.7f;
                 animationDurationFar = 1f;
                 break;
             case SpeedOption.Quick:
