@@ -60,10 +60,12 @@ public class RightHandRaycast : MonoBehaviour
         Quick
     }
 	public SpeedOption portalSpeed = SpeedOption.Default;
+	
 
 	
 private void Start()
     {
+		
 		SetSpeedValues();
 		//save spawned portal camera position and rotation
         portalCamInitialPositionL = portalCameraL.transform.position;
@@ -101,6 +103,8 @@ private void Start()
 
     private void Update()
     {
+		
+		
 		//ensure the raycast only hits world objects and not the portal objects
 		int layerMask = 1 << LayerMask.NameToLayer("TestLayer");
 		RaycastHit hit;
@@ -153,7 +157,7 @@ private void Start()
         }
 		
         
-			if (Input.GetKeyDown("e"))
+			if (Input.GetButtonDown("Fire1"))
         {
             
             if (isAnimating == false)
