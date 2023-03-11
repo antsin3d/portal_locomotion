@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEngine.InputSystem;
 using UnityEngine.XR;
 using UnityEngine;
-//using UnityEngine.XR.Interaction.Toolkit;
 
 public class RightHandRaycast : MonoBehaviour
 {
@@ -51,11 +49,6 @@ public class RightHandRaycast : MonoBehaviour
 	
 	public Vector3 LCamOffset;
 	public Vector3 RCamOffset;
-	/*public float portalFadeDuration = 0.3f;
-	private Material portalMeshLMaterial;
-	private Material portalMeshRMaterial;
-	private Color portalMeshLColor;
-	private Color portalMeshRColor;*/
 	
     private bool isAnimating = false;
 	float teleportDistance;
@@ -67,6 +60,14 @@ public class RightHandRaycast : MonoBehaviour
         Quick
     }
 	public SpeedOption portalSpeed = SpeedOption.Default;
+
+	public enum Headset
+    {
+        Meta_Quest_2
+    }
+	public Headset portalQuadSize;
+	private float portalQuadWidth;
+	private float portalQuadHeight;
 	
 	private Vector3 leftCameraPosition;
 	private Vector3 rightCameraPosition;
@@ -74,10 +75,12 @@ public class RightHandRaycast : MonoBehaviour
 	private Transform leftCameraTransform;
 	private Transform rightCameraTransform;
 	
+	private float quadSizeSet;
+	
 private void Start()
     {
-		
 		SetSpeedValues();
+		setPortalQuadSize();
 		//save spawned portal camera rotation
         portalCamInitialRotationL = portalCameraL.transform.rotation;
         portalCamInitialRotationR = portalCameraR.transform.rotation;
@@ -86,11 +89,6 @@ private void Start()
 		initialPortalParentRotationR = portalParentR.rotation;
 		initialPortalParentPositionL = portalParentL.position;
 		initialPortalParentPositionR = portalParentR.position;
-		
-		/*portalMeshLMaterial = portalMeshL.GetComponent<Renderer>().material;
-		portalMeshRMaterial = portalMeshR.GetComponent<Renderer>().material;
-		portalMeshLColor = portalMeshLMaterial.color;
-		portalMeshRColor = portalMeshRMaterial.color;*/
     }
 
     private void SetSpeedValues()
@@ -114,33 +112,39 @@ private void Start()
                 break;
         }
 	}
+	private void setPortalQuadSize()
+    {
+		switch (portalQuadSize) {
+			case Headset.Meta_Quest_2:
+				portalQuadWidth = 4.48f;
+				portalQuadHeight = 2.396413f;
+				break;
+		}
+	}
 
     private void Update()
     {
 		
+		
 		leftCameraPosition = InputTracking.GetLocalPosition(XRNode.LeftEye);
 		rightCameraPosition = InputTracking.GetLocalPosition(XRNode.RightEye);
-		//leftCameraTransform = Camera.main.transform.parent.Find("LeftEyeAnchor");
-		//rightCameraTransform = Camera.main.transform.parent.Find("RightEyeAnchor");
-		Debug.Log("Left Eye Position: " + leftCameraPosition.ToString("F3"));
-		Debug.Log("Left Eye Position: " + rightCameraPosition.ToString("F3"));
-		Debug.Log("Distance: " + Vector3.Distance(leftCameraPosition, rightCameraPosition));
+		
 		//ensure the raycast only hits world objects and not the portal objects
 		int layerMask = 1 << LayerMask.NameToLayer("TestLayer");
 		RaycastHit hit;
+		// // Attach these to the objects themselves
 		//have spawned cameras follow the relative position and rotation of the playercameras
-		//portalCameraL.transform.localPosition = playerCamera.localPosition + LCamOffset;
 		portalCameraL.transform.localPosition = leftCameraPosition;
-		//Debug.Log("Left Portal Cam Position: " + portalCameraL.transform.localPosition);
 		portalCameraL.transform.localRotation = playerCamera.localRotation;
-		//portalCameraR.transform.localPosition = playerCameraR.localPosition + RCamOffset;
 		portalCameraR.transform.localPosition = rightCameraPosition;
 		portalCameraR.transform.localRotation = playerCameraR.localRotation;
+		
 		// Calculate the midpoint between the two cameras
 		Vector3 midpoint = (playerCamera.position + playerCameraR.position) / 2;
+		
 		// Set the position of the object to the midpoint between the two player cameras
 		playerCameraCenter.position = midpoint;
-		
+		// // if isanimating return
 		 if (Physics.Raycast(rightHand.position, rightHand.forward, out hit, maxDistance, layerMask))
         {
            //before pressing 'fire' key:
@@ -174,17 +178,34 @@ private void Start()
             Quaternion currentRotationR = portalParentR.rotation;
             Quaternion targetRotationR = playerCameraCenter.rotation;
             portalParentR.rotation = Quaternion.Euler(currentRotationR.eulerAngles.x, currentRotationR.eulerAngles.y, targetRotationR.eulerAngles.z);
+			
+			/* Scale portal quads to fill screens
+			if (XRSettings.eyeTextureWidth != 0 && quadSizeSet != 1)
+				{
+					
+					// Get the screen width and height
+					float screenWidth = XRSettings.eyeTextureWidth;
+					float screenWidthBothEyes = XRSettings.eyeTextureWidth*2;
+					float screenHeight = XRSettings.eyeTextureHeight;
+					
+					Camera activeCamera = playerCamera.GetComponent<Camera>();
+					float fov = activeCamera.fieldOfView;
+					float aspectRatio = activeCamera.aspect;
+					Debug.LogFormat("Eye texture dimensions: {0}x{1}", XRSettings.eyeTextureDesc.width, XRSettings.eyeTextureDesc.height);
+            		Debug.Log(XRSettings.deviceEyeTextureDimension);
+					//portalMeshL.transform.localScale = new Vector3(quadWidth, quadHeight, 0.0001f);
+					
+					quadSizeSet = 1;
+				}*/
 			}
         }
 		
         
-			if (Input.GetButtonDown("Fire1"))
-        {
-            
-            if (isAnimating == false)
-            {
+		if (Input.GetButtonDown("Fire1")) {
+			if (isAnimating == false)
+			{
 				
-                isAnimating = true;
+				isAnimating = true;
 				hitPointLock = hitPoint;
 				portalCameraParent.position = hitPointLock;
 				portalRotationLockL = portalParentL.localRotation;
@@ -199,12 +220,12 @@ private void Start()
 				if (teleportDistance < 10) {
 					animationDuration = animationDurationClose;
 				}
-                portalMeshL.SetActive(true);
-                portalMeshR.SetActive(true);
+				portalMeshL.SetActive(true);
+				portalMeshR.SetActive(true);
 				portalMeshStencilL.SetActive(true);
 				portalMeshStencilR.SetActive(true);
-                StartCoroutine(AnimateObject());
-            }
+				StartCoroutine(AnimateObject());
+			}
         }
     }
 
@@ -237,35 +258,10 @@ private void Start()
     private void TeleportPlayer()
     {
         player.position = hitPointLock;
-		//StartCoroutine(FadePortalMeshMaterials());
 		portalMeshStencilL.SetActive(false);
 		portalMeshStencilR.SetActive(false);
 		portalMeshL.SetActive(false);
 		portalMeshR.SetActive(false);
 		isAnimating = false;
     }
-	
-	/*IEnumerator FadePortalMeshMaterials()
-	{
-		float currentFadeDuration = 0f;
-		float fadeStartTime = Time.time;
-
-		while (currentFadeDuration < portalFadeDuration)
-		{
-			currentFadeDuration = Time.time - fadeStartTime;
-			float t = currentFadeDuration / portalFadeDuration;
-			Color newColor = new Color(portalMeshLColor.r, portalMeshLColor.g, portalMeshLColor.b, Mathf.Lerp(1, 0, t));
-			portalMeshLMaterial.color = newColor;
-			portalMeshRMaterial.color = newColor;
-			yield return null;
-		}
-
-		portalMeshStencilL.SetActive(false);
-		portalMeshStencilR.SetActive(false);
-		portalMeshL.SetActive(false);
-		portalMeshR.SetActive(false);
-		//portalMeshLMaterial.color = new Color(portalMeshLColor.r, portalMeshLColor.g, portalMeshLColor.b, 1f);
-		//portalMeshRMaterial.color = new Color(portalMeshRColor.r, portalMeshRColor.g, portalMeshRColor.b, 1f);
-		isAnimating = false;
-	}*/
 }

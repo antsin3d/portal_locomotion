@@ -8,13 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Stencil_01_Diffuse
-  m_Shader: {fileID: 4800000, guid: a956924bd6a8ae44ca741bc69e575fe3, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4ab6f882036cdd1408c61da6e576efeb, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -26,6 +26,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Emission: 1
+    - _Glossiness: 0.5
+    - _Metallic: 0
     - _Stencil: 1
     - _StencilComp: 3
     - _StencilOp: 0
