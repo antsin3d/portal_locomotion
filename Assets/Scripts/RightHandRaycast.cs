@@ -27,7 +27,7 @@ public class RightHandRaycast : MonoBehaviour
 	public Transform portalMeshStencilLtransform;
 	public Transform portalMeshStencilRtransform;
 	
-	public float distance = 0.1f;
+	public float portalDiscDistance = 0.3f;
     private Vector3 startScale;
     public Vector3 endScale;
     private float animationDuration;
@@ -47,8 +47,8 @@ public class RightHandRaycast : MonoBehaviour
 	private Quaternion portalRotationLockR;
 	private Quaternion portalStartRotation;
 	
-	public Vector3 LCamOffset;
-	public Vector3 RCamOffset;
+	//public Vector3 LCamOffset;
+	//public Vector3 RCamOffset;
 	
     private bool isAnimating = false;
 	float teleportDistance;
@@ -157,12 +157,12 @@ private void Start()
             Vector3 direction = hitPoint - playerCamera.position;
 			Vector3 directionR = hitPoint - playerCameraR.position;
 			Vector3 camToHit = hitPoint - playerCamera.position;
-			Vector3 objectPos = playerCamera.position + camToHit.normalized * distance;
+			Vector3 objectPos = playerCamera.position + camToHit.normalized * portalDiscDistance;
 			portalParentL.position = objectPos;
 			portalParentL.LookAt(hitPoint);
 			
 			Vector3 camToHitR = hitPoint - playerCameraR.position;
-			Vector3 objectPosR = playerCameraR.position + camToHit.normalized * distance;
+			Vector3 objectPosR = playerCameraR.position + camToHit.normalized * portalDiscDistance;
 			portalParentR.position = objectPosR;
 			portalParentR.LookAt(hitPoint);
 			
