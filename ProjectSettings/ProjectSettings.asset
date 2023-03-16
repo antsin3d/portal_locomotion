@@ -805,6 +805,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
+    Android: RH_SerializedDictionary
     Standalone: RH_SerializedDictionary
   additionalCompilerArguments: {}
   platformArchitecture: {}

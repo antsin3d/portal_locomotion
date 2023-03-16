@@ -34,6 +34,7 @@ public class RightHandRaycast : MonoBehaviour
 	private float animationDurationClose;
     private float animationDurationMid;
 	private float animationDurationFar;
+	//set how far the user is allowed to teleport by default
     public float maxDistance = 100f;
 	
     public LayerMask layerMask;
@@ -47,12 +48,9 @@ public class RightHandRaycast : MonoBehaviour
 	private Quaternion portalRotationLockR;
 	private Quaternion portalStartRotation;
 	
-	//public Vector3 LCamOffset;
-	//public Vector3 RCamOffset;
-	
     private bool isAnimating = false;
 	float teleportDistance;
-	
+	private string hmdName;
 	public enum SpeedOption
     {
         Slow,
@@ -60,7 +58,7 @@ public class RightHandRaycast : MonoBehaviour
         Quick
     }
 	public SpeedOption portalSpeed = SpeedOption.Default;
-
+	//this will be updated as we add support for more headsets - let us know if you have values for us!
 	public enum Headset
     {
         Meta_Quest_2
@@ -74,8 +72,12 @@ public class RightHandRaycast : MonoBehaviour
 	
 	private Transform leftCameraTransform;
 	private Transform rightCameraTransform;
-	
+	 
 	private float quadSizeSet;
+	float playerFOV;
+	Camera playerCameraComponentL;
+	Camera portalCameraComponentL;
+	Camera portalCameraComponentR;
 	
 private void Start()
     {
@@ -89,8 +91,13 @@ private void Start()
 		initialPortalParentRotationR = portalParentR.rotation;
 		initialPortalParentPositionL = portalParentL.position;
 		initialPortalParentPositionR = portalParentR.position;
-    }
+		//get the cameras for FOV setting
+		playerCameraComponentL = playerCamera.GetComponent<Camera>();
+		portalCameraComponentL = portalCameraL.GetComponent<Camera>();
+		portalCameraComponentR = portalCameraR.GetComponent<Camera>();
 
+    }
+	//Configure your movement speed at various distances
     private void SetSpeedValues()
     {
         switch (portalSpeed)
@@ -112,6 +119,8 @@ private void Start()
                 break;
         }
 	}
+	//once we have multiple headsets supported we'll do this based on pulled headset name but this works for now
+	//if you have tips on pulling the name let me know. So far I only get things like "Head Tracking - OpenXR"
 	private void setPortalQuadSize()
     {
 		switch (portalQuadSize) {
@@ -125,14 +134,15 @@ private void Start()
     private void Update()
     {
 		
-		
+		//checking the *actual* offset of the player cameras
 		leftCameraPosition = InputTracking.GetLocalPosition(XRNode.LeftEye);
 		rightCameraPosition = InputTracking.GetLocalPosition(XRNode.RightEye);
 		
 		//ensure the raycast only hits world objects and not the portal objects
 		int layerMask = 1 << LayerMask.NameToLayer("TestLayer");
 		RaycastHit hit;
-		// // Attach these to the objects themselves
+
+		// // Attach the following 4 lines of code to the objects themselves if you want to optimize. Left here for clarity
 		//have spawned cameras follow the relative position and rotation of the playercameras
 		portalCameraL.transform.localPosition = leftCameraPosition;
 		portalCameraL.transform.localRotation = playerCamera.localRotation;
@@ -153,7 +163,7 @@ private void Start()
 			hitPoint = hit.point;
             portalCameraParent.position = hitPoint;
 			
-			 // Calculate the direction from the camera to the hitpoint to position mask objects
+			 // Calculate the direction from the camera to the hitpoint to position mask objects starting position
             Vector3 direction = hitPoint - playerCamera.position;
 			Vector3 directionR = hitPoint - playerCameraR.position;
 			Vector3 camToHit = hitPoint - playerCamera.position;
@@ -178,25 +188,14 @@ private void Start()
             Quaternion currentRotationR = portalParentR.rotation;
             Quaternion targetRotationR = playerCameraCenter.rotation;
             portalParentR.rotation = Quaternion.Euler(currentRotationR.eulerAngles.x, currentRotationR.eulerAngles.y, targetRotationR.eulerAngles.z);
-			
-			/* Scale portal quads to fill screens
-			if (XRSettings.eyeTextureWidth != 0 && quadSizeSet != 1)
-				{
-					
-					// Get the screen width and height
-					float screenWidth = XRSettings.eyeTextureWidth;
-					float screenWidthBothEyes = XRSettings.eyeTextureWidth*2;
-					float screenHeight = XRSettings.eyeTextureHeight;
-					
-					Camera activeCamera = playerCamera.GetComponent<Camera>();
-					float fov = activeCamera.fieldOfView;
-					float aspectRatio = activeCamera.aspect;
-					Debug.LogFormat("Eye texture dimensions: {0}x{1}", XRSettings.eyeTextureDesc.width, XRSettings.eyeTextureDesc.height);
-            		Debug.Log(XRSettings.deviceEyeTextureDimension);
-					//portalMeshL.transform.localScale = new Vector3(quadWidth, quadHeight, 0.0001f);
-					
-					quadSizeSet = 1;
-				}*/
+			//set portal cameras FOV to match player cameras
+			if (portalCameraComponentL.fieldOfView == 60f) {
+				playerFOV = playerCameraComponentL.fieldOfView;
+				portalCameraComponentL.fieldOfView = playerFOV;
+				portalCameraComponentR.fieldOfView = playerFOV;
+				//hmdName = SystemInfo.deviceName;
+				//Debug.Log(hmdName);
+				}
 			}
         }
 		
@@ -204,12 +203,13 @@ private void Start()
 		if (Input.GetButtonDown("Fire1")) {
 			if (isAnimating == false)
 			{
-				
+				//set initial locations
 				isAnimating = true;
 				hitPointLock = hitPoint;
 				portalCameraParent.position = hitPointLock;
 				portalRotationLockL = portalParentL.localRotation;
 				portalRotationLockR = portalParentR.localRotation;
+				//in the future I'll derive these distance values as a % of your max distance
 				teleportDistance = Vector3.Distance(player.position, hitPoint);
 				if (teleportDistance > 10){
 					animationDuration = animationDurationMid;
@@ -220,6 +220,7 @@ private void Start()
 				if (teleportDistance < 10) {
 					animationDuration = animationDurationClose;
 				}
+				//show portal objects
 				portalMeshL.SetActive(true);
 				portalMeshR.SetActive(true);
 				portalMeshStencilL.SetActive(true);
