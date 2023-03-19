@@ -96,42 +96,43 @@ public class RightHandRaycast : MonoBehaviour
 	float scaleFactor;
 	float scaleFactorWidth;
 	float scaleFactorHeight;
-private void Start()
-    {
-		SetSpeedValues();
-		StartCoroutine(CheckForVRDevice());
-		//save spawned portal camera rotation
-        portalCamInitialRotationL = portalCameraL.transform.rotation;
-        portalCamInitialRotationR = portalCameraR.transform.rotation;
-		portalStartRotation = portalParentL.localRotation;
-		initialPortalParentRotationL = portalParentL.rotation;
-		initialPortalParentRotationR = portalParentR.rotation;
-		initialPortalParentPositionL = portalParentL.position;
-		initialPortalParentPositionR = portalParentR.position;
-		//get the cameras for FOV setting
-		playerCameraComponentL = playerCamera.GetComponent<Camera>();
-		playerCameraComponentR = playerCameraR.GetComponent<Camera>();
-		portalCameraComponentL = portalCameraL.GetComponent<Camera>();
-		portalCameraComponentR = portalCameraR.GetComponent<Camera>();
-    }
+	
+	private void Start()
+		{
+			SetSpeedValues();
+			StartCoroutine(CheckForVRDevice());
+			//save spawned portal camera rotation
+			portalCamInitialRotationL = portalCameraL.transform.rotation;
+			portalCamInitialRotationR = portalCameraR.transform.rotation;
+			portalStartRotation = portalParentL.localRotation;
+			initialPortalParentRotationL = portalParentL.rotation;
+			initialPortalParentRotationR = portalParentR.rotation;
+			initialPortalParentPositionL = portalParentL.position;
+			initialPortalParentPositionR = portalParentR.position;
+			//get the cameras for FOV setting
+			playerCameraComponentL = playerCamera.GetComponent<Camera>();
+			playerCameraComponentR = playerCameraR.GetComponent<Camera>();
+			portalCameraComponentL = portalCameraL.GetComponent<Camera>();
+			portalCameraComponentR = portalCameraR.GetComponent<Camera>();
+		}
 
 	void CreateAndAssignRenderTexture()
-    {
-        int renderTextureWidth = XRSettings.eyeTextureWidth * 2;
-        int renderTextureHeight = XRSettings.eyeTextureHeight;
+	{
+		int renderTextureWidth = XRSettings.eyeTextureWidth * 2;
+		int renderTextureHeight = XRSettings.eyeTextureHeight;
 
 		
-        // Create the RenderTexture with the specified dimensions
-        renderTextureL = new RenderTexture(renderTextureWidth, renderTextureHeight, 24, RenderTextureFormat.ARGB32);
-        renderTextureL.Create();
+		// Create the RenderTexture with the specified dimensions
+		renderTextureL = new RenderTexture(renderTextureWidth, renderTextureHeight, 24, RenderTextureFormat.ARGB32);
+		renderTextureL.Create();
 		renderTextureR = new RenderTexture(renderTextureWidth, renderTextureHeight, 24, RenderTextureFormat.ARGB32);
-        renderTextureR.Create();
+		renderTextureR.Create();
 
 		// Get the Camera component from the portalCameraL game object
-    	Camera portalCameraLComponent = portalCameraL.GetComponent<Camera>();
+		Camera portalCameraLComponent = portalCameraL.GetComponent<Camera>();
 		Camera portalCameraRComponent = portalCameraR.GetComponent<Camera>();
 
-        // Set the RenderTexture as the target texture for the portalCameraL
+		// Set the RenderTexture as the target texture for the portalCameraL
 		if (portalCameraLComponent != null)
 		{
 			portalCameraLComponent.targetTexture = renderTextureL;
@@ -143,41 +144,41 @@ private void Start()
 			return;
 		}
 
-        // Assign the RenderTexture to the Albedo (RGB) texture channel of the portalMesh
-        Renderer objectRendererL = portalMeshL.GetComponent<Renderer>();
+		// Assign the RenderTexture to the Albedo (RGB) texture channel of the portalMesh
+		Renderer objectRendererL = portalMeshL.GetComponent<Renderer>();
 		Renderer objectRendererR = portalMeshR.GetComponent<Renderer>();
-        if (objectRendererL != null && objectRendererL.material != null)
-        {
-            objectRendererL.material.SetTexture("_MainTex", renderTextureL);
+		if (objectRendererL != null && objectRendererL.material != null)
+		{
+			objectRendererL.material.SetTexture("_MainTex", renderTextureL);
 			objectRendererR.material.SetTexture("_MainTex", renderTextureR);
-        }
-        else
-        {
-            Debug.LogError("Renderer or material not found on portalMesh.");
-        }
+		}
+		else
+		{
+			Debug.LogError("Renderer or material not found on portalMesh.");
+		}
 	}
 
 	//Configure your movement speed at various distances
-    private void SetSpeedValues()
-    {
-        switch (portalSpeed)
-        {
-            case SpeedOption.Slow:
-                animationDurationClose = 0.8f;
-                animationDurationMid = 1f;
-                animationDurationFar = 1.3f;
-                break;
-            case SpeedOption.Default:
-                animationDurationClose = 0.5f;
-                animationDurationMid = 0.7f;
-                animationDurationFar = 1f;
-                break;
-            case SpeedOption.Quick:
-                animationDurationClose = 0.3f;
-                animationDurationMid = 0.5f;
-                animationDurationFar = 0.7f;
-                break;
-        }
+	private void SetSpeedValues()
+	{
+		switch (portalSpeed)
+		{
+			case SpeedOption.Slow:
+				animationDurationClose = 0.9f;
+				animationDurationMid = 1.2f;
+				animationDurationFar = 1.5f;
+				break;
+			case SpeedOption.Default:
+				animationDurationClose = 0.6f;
+				animationDurationMid = 0.8f;
+				animationDurationFar = 1.1f;
+				break;
+			case SpeedOption.Quick:
+				animationDurationClose = 0.4f;
+				animationDurationMid = 0.6f;
+				animationDurationFar = 0.8f;
+				break;
+		}
 	}
 
 	private IEnumerator CheckForVRDevice()
