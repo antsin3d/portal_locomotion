@@ -1,0 +1,1487 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.23403) 64bit Core' Language: 'en' Physical Memory: 32702 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+D:/GitHub/portal_locomotion
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+54720
+Successfully changed project path to: D:/GitHub/portal_locomotion
+D:/GitHub/portal_locomotion
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [10512] Host "[IP] 192.168.1.231 [Port] 0 [Flags] 2 [Guid] 2000641395 [EditorId] 2000641395 [Version] 1048832 [Id] WindowsEditor(7,CITADEL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [10512] Host "[IP] 192.168.1.231 [Port] 0 [Flags] 2 [Guid] 2000641395 [EditorId] 2000641395 [Version] 1048832 [Id] WindowsEditor(7,CITADEL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 166.22 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.65 ms.
+Initialize engine version: 2021.3.16f1 (4016570cf34f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/GitHub/portal_locomotion/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
+    Vendor:   NVIDIA
+    VRAM:     8043 MB
+    Driver:   31.0.15.2225
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56068
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.014208 seconds.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 124.48 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.22 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.880 seconds
+Domain Reload Profiling:
+	ReloadAssembly (881ms)
+		BeginReloadAssembly (132ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (610ms)
+			LoadAssemblies (132ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (144ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (374ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (87ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (125ms)
+				BeforeProcessingInitializeOnLoad (4ms)
+				ProcessInitializeOnLoadAttributes (100ms)
+				ProcessInitializeOnLoadMethodAttributes (58ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.014362 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 111.17 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Package Manager log level set to [2]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:296 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:281 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <75633565436c42f0a6426b33f0132ade>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <75633565436c42f0a6426b33f0132ade>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <75633565436c42f0a6426b33f0132ade>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <11d97693183d4a6bb35c29ae7882c66b>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.570 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1571ms)
+		BeginReloadAssembly (220ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (131ms)
+		EndReloadAssembly (1241ms)
+			LoadAssemblies (122ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (322ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (680ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (31ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (111ms)
+				BeforeProcessingInitializeOnLoad (132ms)
+				ProcessInitializeOnLoadAttributes (316ms)
+				ProcessInitializeOnLoadMethodAttributes (79ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 1.81 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 5775 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 59 unused Assets / (345.4 KB). Loaded Objects now: 6223.
+Memory consumption went from 220.8 MB to 220.4 MB.
+Total: 4.318700 ms (FindLiveObjects: 0.468600 ms CreateObjectMapping: 0.394900 ms MarkObjects: 3.293000 ms  DeleteObjects: 0.161200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 109542.502292 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample
+  artifactKey: Guid(07b118cef41f7c3419890f2c4c07dbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample using Guid(07b118cef41f7c3419890f2c4c07dbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7f5d10d515b5df159f9df5c39313516') in 0.017907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 254.155590 seconds.
+  path: Assets/Prefabs/XR Origin.prefab
+  artifactKey: Guid(43d6d3b7f32bca540b5926e4e6392f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/XR Origin.prefab using Guid(43d6d3b7f32bca540b5926e4e6392f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed3e36e5d25bcc59cbfef1989249378') in 0.056607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.702214 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79842766b460edbeab6a34051e857a80') in 0.006709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.907700 seconds.
+  path: Assets/Teleportals
+  artifactKey: Guid(db04aa1272d8e6f478706460bd627540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals using Guid(db04aa1272d8e6f478706460bd627540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91ee7415093d391c97b67d3691937661') in 0.005302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.120312 seconds.
+  path: Assets/Shaders
+  artifactKey: Guid(e9af1abb4a158b24ab39cde02fbc73ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders using Guid(e9af1abb4a158b24ab39cde02fbc73ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09bac568d7f9e20a421f8bd5333cc6e3') in 0.005348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.980544 seconds.
+  path: Assets/_TerrainAutoUpgrade
+  artifactKey: Guid(2c6f3d6f90d8c8a408dbfa46be176b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_TerrainAutoUpgrade using Guid(2c6f3d6f90d8c8a408dbfa46be176b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '492318c02181ad744d121cba1527db33') in 0.009004 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011970 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:296 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:281 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <75633565436c42f0a6426b33f0132ade>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <75633565436c42f0a6426b33f0132ade>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <75633565436c42f0a6426b33f0132ade>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <11d97693183d4a6bb35c29ae7882c66b>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.269 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1269ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1020ms)
+			LoadAssemblies (121ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (334ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (480ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (38ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (273ms)
+				ProcessInitializeOnLoadMethodAttributes (72ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.83 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 5708 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 49 unused Assets / (309.8 KB). Loaded Objects now: 6229.
+Memory consumption went from 225.4 MB to 225.1 MB.
+Total: 4.836100 ms (FindLiveObjects: 0.503600 ms CreateObjectMapping: 0.451700 ms MarkObjects: 3.785500 ms  DeleteObjects: 0.094000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 46.755569 seconds.
+  path: Assets/Teleportals/Scripts/TeleportUser_E_Key.cs
+  artifactKey: Guid(f629fa309f6dd6042a35a20ac3e5f97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/TeleportUser_E_Key.cs using Guid(f629fa309f6dd6042a35a20ac3e5f97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2b2e8849aad4aaa85069ead2b4a03c9') in 0.031835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.708333 seconds.
+  path: Assets/Teleportals/Scripts/LerpToCamera.cs
+  artifactKey: Guid(972ac126c6c5d7c4e9cee5ce62a24e02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/LerpToCamera.cs using Guid(972ac126c6c5d7c4e9cee5ce62a24e02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3abc193d62880c1cd068235fb2c0b5e8') in 0.005486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 40.299006 seconds.
+  path: Assets/Teleportals/Prefabs/XR Interaction Manager.prefab
+  artifactKey: Guid(b13318697c9e4da42ad18c8112baf256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Prefabs/XR Interaction Manager.prefab using Guid(b13318697c9e4da42ad18c8112baf256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0cb7ae255fa714a7ab24bd571a0d044') in 0.035835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006521 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Example/DataBaseExample.cs
+  artifactKey: Guid(01676c610da230d44bf354f89a960a84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Example/DataBaseExample.cs using Guid(01676c610da230d44bf354f89a960a84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '479d4b0ea4774854e0796ed50890c6be') in 0.005537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003922 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders
+  artifactKey: Guid(2a80b77ac73e03c459bcc0d950a7484b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders using Guid(2a80b77ac73e03c459bcc0d950a7484b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfdf41f346b77d58a3504987a271404f') in 0.005038 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004626 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/StencilViewer
+  artifactKey: Guid(139363f5f0a660347bc24f496f66c7ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/StencilViewer using Guid(139363f5f0a660347bc24f496f66c7ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1dcb66c37a30e65012262faf31c3747') in 0.005388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.088398 seconds.
+  path: Assets/_TerrainAutoUpgrade/layer_dirt01b3407d0e55802f81.terrainlayer
+  artifactKey: Guid(4e494a34f83f76249b36a936c4518b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_TerrainAutoUpgrade/layer_dirt01b3407d0e55802f81.terrainlayer using Guid(4e494a34f83f76249b36a936c4518b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbe17c1b3bf77d196f586497113b7db0') in 0.047159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001085 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Textures
+  artifactKey: Guid(9fcce063c50b58049b8c0bb17dc31ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Textures using Guid(9fcce063c50b58049b8c0bb17dc31ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b4e5f4b943613faac09de4d0e12b839') in 0.005298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011135 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor/Definer.cs
+  artifactKey: Guid(db381ff7b4ec4384d8ec4f8cf79d7398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor/Definer.cs using Guid(db381ff7b4ec4384d8ec4f8cf79d7398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c2b12054d889d07b6464863cdefbfd4') in 0.005391 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.010378 seconds.
+  path: Assets/Teleportals/Scripts/ArcPointerScript.cs
+  artifactKey: Guid(8769b65bb2f5cff4292a9362758f92fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/ArcPointerScript.cs using Guid(8769b65bb2f5cff4292a9362758f92fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '434ae6a568af75ec54d6634bb16a347e') in 0.005124 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004559 seconds.
+  path: Assets/Teleportals/Scripts/ClothControl.cs
+  artifactKey: Guid(baffe916a356b544d9c234719373e95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/ClothControl.cs using Guid(baffe916a356b544d9c234719373e95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f9e487e08c44d0c93941d2825a25652') in 0.005041 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003714 seconds.
+  path: Assets/Teleportals/Scripts/PortalContentCulling.cs
+  artifactKey: Guid(8aa8b3ef806b6e44496ac2cd3700018e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/PortalContentCulling.cs using Guid(8aa8b3ef806b6e44496ac2cd3700018e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55feb36b32700ff98e104e74053138ac') in 0.004977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.036711 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Example/DataBase.asset
+  artifactKey: Guid(de7597505a523bb4a86a54abc48464a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Example/DataBase.asset using Guid(de7597505a523bb4a86a54abc48464a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a5ebbad0827aa7f646673a8327af621') in 0.025665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003302 seconds.
+  path: Assets/Teleportals/Prefabs/PortalCameras.prefab
+  artifactKey: Guid(f03dbd4cb6841e44d9637cdddb2bd925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Prefabs/PortalCameras.prefab using Guid(f03dbd4cb6841e44d9637cdddb2bd925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f4068c368d6fc45a4d41a622f47dcba') in 0.197666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003748 seconds.
+  path: Assets/XR/Settings/Mock HMD Build Settings.asset
+  artifactKey: Guid(828427cd513957143b9fe93f1c8778a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/Settings/Mock HMD Build Settings.asset using Guid(828427cd513957143b9fe93f1c8778a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aaadce738177ae3ce7d9bd9abe33e38') in 0.005951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003696 seconds.
+  path: Assets/Teleportals/Materials/PortalShader.shader
+  artifactKey: Guid(879dd0f9f1bfb2a409e6e35d401e7d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/PortalShader.shader using Guid(879dd0f9f1bfb2a409e6e35d401e7d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f955479480aa2de60bb3e99f765cf59') in 0.010556 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009362 seconds.
+  path: Assets/Teleportals/Scripts/AspectRatioScript.cs
+  artifactKey: Guid(00ab0433c2321cd47b7261c0f2e24641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/AspectRatioScript.cs using Guid(00ab0433c2321cd47b7261c0f2e24641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2256fca5555b68e327c218d96f6ee42d') in 0.005004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003375 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Standard/UnlitStencilShader.shader
+  artifactKey: Guid(4ab6f882036cdd1408c61da6e576efeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Standard/UnlitStencilShader.shader using Guid(4ab6f882036cdd1408c61da6e576efeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2765edb95561f65a3530165262421ba6') in 0.005264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015240 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/ReorderableList
+  artifactKey: Guid(9d8bc9729cfff8f45b6769b3a800ecbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/ReorderableList using Guid(9d8bc9729cfff8f45b6769b3a800ecbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '307e5832ba43c2c88cc2efca946e4e22') in 0.005643 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001074 seconds.
+  path: Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets
+  artifactKey: Guid(4f7b7109db002654297e1e8dd11b31a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets using Guid(4f7b7109db002654297e1e8dd11b31a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c4cd810b7ccac40f63ce632f7450a03') in 0.005344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009552 seconds.
+  path: Assets/XR/Loaders/Oculus Loader.asset
+  artifactKey: Guid(54bfe74f58788974fbca40a3fde3fd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/Loaders/Oculus Loader.asset using Guid(54bfe74f58788974fbca40a3fde3fd9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69965a68bd9b050fd5578376f7b53826') in 0.006009 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000762 seconds.
+  path: Assets/Teleportals/Materials/Portal_MPB_Versions
+  artifactKey: Guid(ef462f8c7f6c1d64cb9454ba24ea081f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/Portal_MPB_Versions using Guid(ef462f8c7f6c1d64cb9454ba24ea081f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74e1d58076f46d2237cbd8afbff954c7') in 0.005326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011507 seconds.
+  path: Assets/Teleportals/Scripts/ShaderEnums/Shader_ColorWriteMask.cs
+  artifactKey: Guid(9b530eb9827adac4391ffdcf762666db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/ShaderEnums/Shader_ColorWriteMask.cs using Guid(9b530eb9827adac4391ffdcf762666db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9758f0ad31ee522f2e37a4afa8b49d47') in 0.005286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000665 seconds.
+  path: Assets/XRI/Settings
+  artifactKey: Guid(3b779bb4f0e10dc48bd2d1ed3d9a6437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XRI/Settings using Guid(3b779bb4f0e10dc48bd2d1ed3d9a6437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afacc7ca515c21e8ee489524e2fff707') in 0.005009 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014945 seconds.
+  path: Assets/Teleportals/Materials
+  artifactKey: Guid(533fb62e684fea44b9caa828baa554e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials using Guid(533fb62e684fea44b9caa828baa554e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e87bfd78cb2db5ac91b07b9c6cdf9cba') in 0.004962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008717 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor
+  artifactKey: Guid(2acf2fe79d0c0d248895ed3b92135bf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor using Guid(2acf2fe79d0c0d248895ed3b92135bf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '080dac08b6cb118586abc6f9f638a1d2') in 0.005231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003860 seconds.
+  path: Assets/_TerrainAutoUpgrade/layer_grass01b3407d0e55802f81.terrainlayer
+  artifactKey: Guid(bc99914c278297043ba7d8cad8f40111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_TerrainAutoUpgrade/layer_grass01b3407d0e55802f81.terrainlayer using Guid(bc99914c278297043ba7d8cad8f40111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e76fe4ded9f150cf91eb90c4f0a6bdd') in 0.009574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011642 seconds.
+  path: Assets/XR/XRGeneralSettings.asset
+  artifactKey: Guid(3128356ae25a15c4caa40261154cd238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/XRGeneralSettings.asset using Guid(3128356ae25a15c4caa40261154cd238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31b62ae509ae1eed9c09d5f5bac02e88') in 0.012264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001324 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Masks
+  artifactKey: Guid(7413ac95b2b4ec5479961aedcfe816d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Masks using Guid(7413ac95b2b4ec5479961aedcfe816d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '364585f0578bfb0e3ca8a4437c37403a') in 0.005320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004117 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/StencilViewer/Stencil_ViewerTextured.shader
+  artifactKey: Guid(172aa62b39c821d4481fee42e457e8f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/StencilViewer/Stencil_ViewerTextured.shader using Guid(172aa62b39c821d4481fee42e457e8f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e17d74178de37d65217d9a522eacaa80') in 0.005733 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.022868 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/StandardNoCulling.shader
+  artifactKey: Guid(717bc8f73d5aea64caef02a0c07b1e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/StandardNoCulling.shader using Guid(717bc8f73d5aea64caef02a0c07b1e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec2683464ae99f7c612c7b35bd28271') in 0.006201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/XRI/Settings/Resources
+  artifactKey: Guid(b3a62137ea719034e9b77f207fd8ed16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XRI/Settings/Resources using Guid(b3a62137ea719034e9b77f207fd8ed16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4382d30fedc19c3e504f3ee537f4e9') in 0.005130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007272 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Meshes/Source/tree_1.fbx
+  artifactKey: Guid(4735160b42a3154428094dff59ef0f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Meshes/Source/tree_1.fbx using Guid(4735160b42a3154428094dff59ef0f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12c2277593e8f03081fe510f11f3ed17') in 0.283902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004294 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Example/NestedDB.cs
+  artifactKey: Guid(86c2746ac6d3d924bb04108285ea0aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Example/NestedDB.cs using Guid(86c2746ac6d3d924bb04108285ea0aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e92a1c35e873ca3f2e40aa0af1e0417') in 0.005249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003518 seconds.
+  path: Assets/Teleportals/Scripts/RightHandRaycast.cs
+  artifactKey: Guid(8db9342d5cc7e0b4f86a417f1f20c825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/RightHandRaycast.cs using Guid(8db9342d5cc7e0b4f86a417f1f20c825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b249ddd358060393030d92236272dc15') in 0.005260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001385 seconds.
+  path: Assets/Teleportals/Shaders/CustomInternalShaders
+  artifactKey: Guid(da04f29114c7c2c49b2ec9ce7dd32b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/CustomInternalShaders using Guid(da04f29114c7c2c49b2ec9ce7dd32b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51791005ab900c7a90b5057423af4a96') in 0.005378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.010933 seconds.
+  path: Assets/XRI/Settings/Resources/InteractionLayerSettings.asset
+  artifactKey: Guid(e5b89f9e116b75a4d9159abb86666c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XRI/Settings/Resources/InteractionLayerSettings.asset using Guid(e5b89f9e116b75a4d9159abb86666c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c50e2d4b20a6ce8ef70afbe13e888fd') in 0.006383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001596 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/Shared
+  artifactKey: Guid(03cfa9e428c032d4f9e7f9ce4e7c2db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/Shared using Guid(03cfa9e428c032d4f9e7f9ce4e7c2db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65ee97ab82ba047e89da4d60e7c49396') in 0.005219 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003922 seconds.
+  path: Assets/Teleportals/Scripts/UI_FrameRateMonitor.cs
+  artifactKey: Guid(ef75536e7ca41454aa39d9db8071f359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/UI_FrameRateMonitor.cs using Guid(ef75536e7ca41454aa39d9db8071f359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38828f477eac42585b9e0a0fdf247a6a') in 0.005125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004169 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Textures/dirt01.tga
+  artifactKey: Guid(30ec70ef60a2bb54ea2df6f72c77bdc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Textures/dirt01.tga using Guid(30ec70ef60a2bb54ea2df6f72c77bdc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2413df64523153039c2f956cc8939a20') in 0.017230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001139 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Meshes/Source
+  artifactKey: Guid(05153222d4fafb14f86e74c3f1ee4eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Meshes/Source using Guid(05153222d4fafb14f86e74c3f1ee4eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84134dcef7e56479dd9eb812947214ce') in 0.004958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.037026 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Textures/tree_branches.png
+  artifactKey: Guid(1d49d1e2d8a2b97478e3e0355dbf3a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Textures/tree_branches.png using Guid(1d49d1e2d8a2b97478e3e0355dbf3a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a767718c8e0bb5e34b807506dcc2ac33') in 0.046443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004560 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Legacy/Stencil_Legacy_Alpha-Diffuse.shader
+  artifactKey: Guid(797ee553737eda34d9e887d2710a48c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Legacy/Stencil_Legacy_Alpha-Diffuse.shader using Guid(797ee553737eda34d9e887d2710a48c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbd9d62502b60b02583f3782cbea094c') in 0.005894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003598 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/PostProcessing Profile.asset
+  artifactKey: Guid(84e004e54aa75074885db0856eedb697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/PostProcessing Profile.asset using Guid(84e004e54aa75074885db0856eedb697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '230746e33aefd05940af55ec4c2e8538') in 0.005817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005155 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor/Constants.cs
+  artifactKey: Guid(e8f7fab786cd2c04194e604600b27211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor/Constants.cs using Guid(e8f7fab786cd2c04194e604600b27211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7d8fbfe16cbb5c23ca73adc9b1a196d') in 0.005299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003551 seconds.
+  path: Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Continuous Turn.preset
+  artifactKey: Guid(0caad3af14f9a414dbdf25ed41e5aa47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Continuous Turn.preset using Guid(0caad3af14f9a414dbdf25ed41e5aa47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9422b6bf5aec3a199f7b6ae6146b8a0a') in 0.010653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004657 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor/SupportWindow.cs
+  artifactKey: Guid(c148ddc40f9a15d4dbbbd484dbdec41a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor/SupportWindow.cs using Guid(c148ddc40f9a15d4dbbbd484dbdec41a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4242c30ae41dbbf9b94d2765b229d6aa') in 0.004772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009159 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Example
+  artifactKey: Guid(599e14707315eaa4e846aa00126a0d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Example using Guid(599e14707315eaa4e846aa00126a0d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a5226cf02163430fcbba6c91a1b65e6') in 0.006414 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009897 seconds.
+  path: Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Continuous Move.preset
+  artifactKey: Guid(91f9da00cfdac5d49955df2d2d820b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Continuous Move.preset using Guid(91f9da00cfdac5d49955df2d2d820b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80bd2ecd4112e3c3015c6addeb89fea4') in 0.007605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015130 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Legacy
+  artifactKey: Guid(ec016463544ca3243a0261390c5d0577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Legacy using Guid(ec016463544ca3243a0261390c5d0577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69264b51efeecdf4db7c817846d7f4dd') in 0.005201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003440 seconds.
+  path: Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Right Controller.preset
+  artifactKey: Guid(1421ad86ff3787b4dae70fe9e699a25f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Right Controller.preset using Guid(1421ad86ff3787b4dae70fe9e699a25f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6175b452cc4b37327d03d2d1f81fc14c') in 0.010617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003230 seconds.
+  path: Assets/XR/Loaders/Open XR Loader.asset
+  artifactKey: Guid(94447edad258ff245bad1428eaf8274d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/Loaders/Open XR Loader.asset using Guid(94447edad258ff245bad1428eaf8274d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86754d32cc5f670284eeb95db00b8b5c') in 0.005919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000831 seconds.
+  path: Assets/XRI
+  artifactKey: Guid(87d61ea765289a0479aa1e1cfe3c5f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XRI using Guid(87d61ea765289a0479aa1e1cfe3c5f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc06801f6e45f9ac8e2be39d16fd3904') in 0.005125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000967 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Meshes
+  artifactKey: Guid(eaaaee0f57e935647bce706f4ad8f73b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Meshes using Guid(eaaaee0f57e935647bce706f4ad8f73b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4734b6b3781ea3795a2b51a854be4cd') in 0.004992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003434 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Meshes/Prefabs/grass01.prefab
+  artifactKey: Guid(b48086d9f175aa34b947a21c8056c3d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Meshes/Prefabs/grass01.prefab using Guid(b48086d9f175aa34b947a21c8056c3d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08b903eddb51a8ef7811956ec4201a4f') in 0.074653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001914 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite
+  artifactKey: Guid(ce03b9d4bc4b1734f9489010d2ae0e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite using Guid(ce03b9d4bc4b1734f9489010d2ae0e0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1d68a860dbafdc7252a8e7dd86610fb') in 0.005369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008156 seconds.
+  path: Assets/Teleportals/Models
+  artifactKey: Guid(ae1494e12b91ddb4e9328281d43a5fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Models using Guid(ae1494e12b91ddb4e9328281d43a5fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c2e4053f7b07514eb15a5ac6ef43a82') in 0.006110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001200 seconds.
+  path: Assets/Teleportals/Samples
+  artifactKey: Guid(836148fe28015f44694285b8e299ab97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Samples using Guid(836148fe28015f44694285b8e299ab97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cdb5a7ae62132c0cc2748a5e212e299') in 0.005697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001597 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Textures
+  artifactKey: Guid(c0559fb2f53666849b4d171e4c9ec147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Textures using Guid(c0559fb2f53666849b4d171e4c9ec147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95ce99b5b43a6f6c5321edbaed61334a') in 0.005304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011257 seconds.
+  path: Assets/Teleportals/Scripts/portalcamera_matchmove.cs
+  artifactKey: Guid(d1d07c43e275b354b9c86f3b222cca64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/portalcamera_matchmove.cs using Guid(d1d07c43e275b354b9c86f3b222cca64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7263cd2633506ede6136db7c96fe27') in 0.005339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.010770 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor/DictionaryPropertyDrawer.cs
+  artifactKey: Guid(535421d7cb5b6b943a76e5f0c855d5d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor/DictionaryPropertyDrawer.cs using Guid(535421d7cb5b6b943a76e5f0c855d5d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac92bbaccb5f5ff3b9c08ea1acf38a40') in 0.005712 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Teleportals/Samples/XR Interaction Toolkit
+  artifactKey: Guid(d6f1174cee321954aac6f634728e6e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Samples/XR Interaction Toolkit using Guid(d6f1174cee321954aac6f634728e6e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78884ce2c416f74a1241954e36e03608') in 0.005011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011044 seconds.
+  path: Assets/Teleportals/Shaders/CustomInternalShaders/CustomInternal-DepthNormalsTexture.shader
+  artifactKey: Guid(49342644f5c530c4c9dcc83d58cb62e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/CustomInternalShaders/CustomInternal-DepthNormalsTexture.shader using Guid(49342644f5c530c4c9dcc83d58cb62e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd853f9169bf0cb5263ed1d1e9bece2a9') in 0.005545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004569 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Textures/bark01_bottom.tga
+  artifactKey: Guid(4e44992d8a199a546aeaaa6ebc63b91a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Textures/bark01_bottom.tga using Guid(4e44992d8a199a546aeaaa6ebc63b91a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad7931ac621d33dc700c1823d726284c') in 0.010998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003773 seconds.
+  path: Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Snap Turn.preset
+  artifactKey: Guid(18697d253d848974aa7052cba872c9f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Snap Turn.preset using Guid(18697d253d848974aa7052cba872c9f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7acc7278423eaabf268c6d77776e39d6') in 0.015290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000921 seconds.
+  path: Assets/XR/Settings
+  artifactKey: Guid(bfaff906f030a4646a26d610683edcf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/Settings using Guid(bfaff906f030a4646a26d610683edcf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a0be7e4f14c4b9a4630b930752e79b0') in 0.003151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Materials
+  artifactKey: Guid(cd0f69bea45e4f84ea174419ce134ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Materials using Guid(cd0f69bea45e4f84ea174419ce134ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5753f2377fc9b5ee1d195e980018f2a4') in 0.001702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.012299 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Legacy/Stencil_Legacy_Reflect-Normal-Spec.shader
+  artifactKey: Guid(8b00848477ca94c4b850130177469400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Legacy/Stencil_Legacy_Reflect-Normal-Spec.shader using Guid(8b00848477ca94c4b850130177469400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e425dba1e3317cd91248a398f9a1ce8') in 0.005988 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003151 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Textures/grassmesh.png
+  artifactKey: Guid(4e364662e65fd2d4a995a4efe45af277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Textures/grassmesh.png using Guid(4e364662e65fd2d4a995a4efe45af277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bc2bd7f84389c871e7e04341c72cca3') in 0.010111 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.013170 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Documentation.pdf
+  artifactKey: Guid(cbf98b49d6e815c4183c8b61dba47f69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Documentation.pdf using Guid(cbf98b49d6e815c4183c8b61dba47f69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a12dd485c7a872a0b70775e3c351c6e') in 0.010865 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000582 seconds.
+  path: Assets/Teleportals/Materials/Portal_02
+  artifactKey: Guid(c7255b339cc1de34b9e71d3f08b51de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/Portal_02 using Guid(c7255b339cc1de34b9e71d3f08b51de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c943016565f52027db3004b46cee9e2d') in 0.005297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003913 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/IDAttribute.cs
+  artifactKey: Guid(553c4210c29c1884fbce9652dafeea9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/IDAttribute.cs using Guid(553c4210c29c1884fbce9652dafeea9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb92fe5e564906be0927c4f13f8c8b89') in 0.005394 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009710 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor/PreferencesWindow.cs
+  artifactKey: Guid(28956686d1e55594b904610e0b1614d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Editor/PreferencesWindow.cs using Guid(28956686d1e55594b904610e0b1614d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '716e098266706f74d84552643c187ab5') in 0.004934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008911 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Masks/DepthMask.shader
+  artifactKey: Guid(863dafe6e1f96c3458ed6e82c924d30d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Masks/DepthMask.shader using Guid(863dafe6e1f96c3458ed6e82c924d30d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764aef9210b412b1384058f2681beea1') in 0.002069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001059 seconds.
+  path: Assets/Teleportals/Materials/Portal_03
+  artifactKey: Guid(6c0d42e826cec5b4eaa7231ced63dc60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/Portal_03 using Guid(6c0d42e826cec5b4eaa7231ced63dc60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3edbb03a795b230c912f5b3904345a2d') in 0.004925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.024133 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Standard/StandardSurfaceShader.shader
+  artifactKey: Guid(85a8c7b0f3845fc4fa7cbdf41c6b138d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Standard/StandardSurfaceShader.shader using Guid(85a8c7b0f3845fc4fa7cbdf41c6b138d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '464be3a652f900038fc8f2d3ed190c2b') in 0.005534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008190 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Meshes/Prefabs
+  artifactKey: Guid(9c7916be32b4831459e123e056137170) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Meshes/Prefabs using Guid(9c7916be32b4831459e123e056137170) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '199263f4a2c337c68ee1ab4ef90d9f75') in 0.004848 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002202 seconds.
+  path: Assets/Teleportals/Materials/PortalShader 1.shader
+  artifactKey: Guid(6c40bf5790445e449895667331fc7e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/PortalShader 1.shader using Guid(6c40bf5790445e449895667331fc7e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96da2ea8364486098f1b57641a73ea57') in 0.005077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000983 seconds.
+  path: Assets/Teleportals/Scripts/ShaderEnums
+  artifactKey: Guid(bfec7cc3a68fc4544bbb7bac43bae43e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/ShaderEnums using Guid(bfec7cc3a68fc4544bbb7bac43bae43e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd25e0ef0bc5b9c219baacb68b77b4ef7') in 0.005301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007636 seconds.
+  path: Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4
+  artifactKey: Guid(b1ee1cf103ae6504da72fe7e8a365db1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4 using Guid(b1ee1cf103ae6504da72fe7e8a365db1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bbc14dfc9d913a4ab706b53e87b919d') in 0.005148 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003865 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Scenes/assets.unity
+  artifactKey: Guid(a143ab047b99a124ca579bc8e0366cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Scenes/assets.unity using Guid(a143ab047b99a124ca579bc8e0366cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4467fc01219ee4f099293e60e59daa07') in 0.005305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.021153 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/Shared/Editor/RotaryHeart.Editor.asmdef
+  artifactKey: Guid(10ebc479cc081044d87faf0f7bd87988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/Shared/Editor/RotaryHeart.Editor.asmdef using Guid(10ebc479cc081044d87faf0f7bd87988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acaf9fe606106115422ace6b05bf03cf') in 0.008702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000951 seconds.
+  path: Assets/Teleportals/Materials/General
+  artifactKey: Guid(903f3632360b1e44bb9be624f1e4f15c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/General using Guid(903f3632360b1e44bb9be624f1e4f15c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5923ead0e033da38e12858f46d1cec71') in 0.005120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003556 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Meshes/Prefabs/tree_1.prefab
+  artifactKey: Guid(eded051879df4c147b9010199d240258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Meshes/Prefabs/tree_1.prefab using Guid(eded051879df4c147b9010199d240258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f33e6a02a5ad1e9510b1e5035450f23f') in 0.013825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000941 seconds.
+  path: Assets/Teleportals/Scripts
+  artifactKey: Guid(dcf92dbcf81e6b14998f56f42786aaaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts using Guid(dcf92dbcf81e6b14998f56f42786aaaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d2528f9729a76d5be8a067ebd122a95') in 0.005006 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004269 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Textures/grass01.tga
+  artifactKey: Guid(6c41a2cea80b4fc499bac2a6c14a4514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Textures/grass01.tga using Guid(6c41a2cea80b4fc499bac2a6c14a4514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30998b3eeec5cff8d4211f5c57773e39') in 0.009310 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005007 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/ReorderableList/ReorderableList.cs
+  artifactKey: Guid(a912a08eeace5594fa91c48e23c7b920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/ReorderableList/ReorderableList.cs using Guid(a912a08eeace5594fa91c48e23c7b920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2dfb9d604523d7b8aa1cdae90e06701') in 0.005122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.017922 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/DrawKeyAsPropertyAttribute.cs
+  artifactKey: Guid(00639d477664ffc42bc48acded7cc5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/DrawKeyAsPropertyAttribute.cs using Guid(00639d477664ffc42bc48acded7cc5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d5581f7077d67a2036c8049404b89a9') in 0.004922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004786 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Example/NestedDB.asset
+  artifactKey: Guid(423983ee7ab789d4c9d70b1256e20c19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/Example/NestedDB.asset using Guid(423983ee7ab789d4c9d70b1256e20c19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09f4aeca5e88ddc246fb1512c6e942af') in 0.010474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.016386 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart
+  artifactKey: Guid(7b0f1e46eadd557458605a3ff7c07d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart using Guid(7b0f1e46eadd557458605a3ff7c07d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd27903d5ab6460f521b5f6eceed52eee') in 0.004817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000991 seconds.
+  path: Assets/Teleportals/Materials/Portal_01
+  artifactKey: Guid(36f9b435f5ae4ca4f97732d787d67dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/Portal_01 using Guid(36f9b435f5ae4ca4f97732d787d67dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72a53b460ef79e9b90940dfe33335d21') in 0.005152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004636 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Masks/StencilMaskID.shader
+  artifactKey: Guid(778766904d48c254db09935633d60bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Masks/StencilMaskID.shader using Guid(778766904d48c254db09935633d60bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d0fb5e5b4525e6e98e0d92d552b6f3e') in 0.005446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003677 seconds.
+  path: Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Input Actions.inputactions
+  artifactKey: Guid(c348712bda248c246b8c49b3db54643f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Input Actions.inputactions using Guid(c348712bda248c246b8c49b3db54643f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76a937832c33fc3f6feda1f5295bf32a') in 0.014859 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011625 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/SerializableDictionaryBase.cs
+  artifactKey: Guid(0e6b03a8ca9bd434fae7398312521818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/SerializableDictionaryBase.cs using Guid(0e6b03a8ca9bd434fae7398312521818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8900951ae41392412010149bf3de11f') in 0.005141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001136 seconds.
+  path: Assets/Teleportals/Materials/StencilMasks
+  artifactKey: Guid(ff4e88cbd8dafc64c971b81b2f278463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/StencilMasks using Guid(ff4e88cbd8dafc64c971b81b2f278463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bf5ce17a99b6378303f887b617185c9') in 0.005192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001657 seconds.
+  path: Assets/Teleportals/Plugins
+  artifactKey: Guid(43e6730a868398b48bcb4ff639c04f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins using Guid(43e6730a868398b48bcb4ff639c04f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40f71d9dbd9026c9e035af05de69c922') in 0.005375 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003535 seconds.
+  path: Assets/InputActionManagerScript.cs
+  artifactKey: Guid(57be06d918f1bb64eba151861b139458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InputActionManagerScript.cs using Guid(57be06d918f1bb64eba151861b139458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c95f5fb1ccec6adb1a6321ab48afdd8') in 0.005138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004319 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Textures/grass01_b.tga
+  artifactKey: Guid(b69992f31e7145e4ba49aa8118c5541c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Textures/grass01_b.tga using Guid(b69992f31e7145e4ba49aa8118c5541c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dec068dff9ae6f9e281291851b959bc9') in 0.010480 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009017 seconds.
+  path: Assets/Teleportals/Materials/PortalAlpha.jpg
+  artifactKey: Guid(7d78ad7cc8ad7724a9747a2ed8ec04bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/PortalAlpha.jpg using Guid(7d78ad7cc8ad7724a9747a2ed8ec04bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea10d859cc84161a7d413d0fda66867c') in 0.013994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004742 seconds.
+  path: Assets/_TerrainAutoUpgrade/layer_grass01_bb3407d0e55802f81.terrainlayer
+  artifactKey: Guid(9049e8aa82391a4429617fba8819b240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_TerrainAutoUpgrade/layer_grass01_bb3407d0e55802f81.terrainlayer using Guid(9049e8aa82391a4429617fba8819b240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '702460de7b0dd3b0216c90550794d6c9') in 0.011234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011517 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Textures/Swatch_2017_03_10_025947_F1.png
+  artifactKey: Guid(c2a05cf5173da20468c188b99af6471c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Textures/Swatch_2017_03_10_025947_F1.png using Guid(c2a05cf5173da20468c188b99af6471c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '473f8647e69ce56a5b9be19eefac4cce') in 0.013283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003727 seconds.
+  path: Assets/Teleportals/Materials/New Render TextureL.renderTexture
+  artifactKey: Guid(7b613deb9fda85f4c9ece2ff7d414f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/New Render TextureL.renderTexture using Guid(7b613deb9fda85f4c9ece2ff7d414f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4154ff6f8f158dcaf14af51e747f6484') in 0.015973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004066 seconds.
+  path: Assets/Teleportals/Scripts/CameraManager.cs
+  artifactKey: Guid(b04776f29da13ae4ca1d5987aca1da1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/CameraManager.cs using Guid(b04776f29da13ae4ca1d5987aca1da1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '888884d8388c2dcccd89afd80f317f28') in 0.005020 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007790 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/Shared/Editor
+  artifactKey: Guid(09b14d633a7f9dc4f8c71028169a6cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/Shared/Editor using Guid(09b14d633a7f9dc4f8c71028169a6cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34af64463a9ddda2e84b824d972b84ca') in 0.001861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003779 seconds.
+  path: Assets/Teleportals/Scripts/PortalMaterialControl.cs
+  artifactKey: Guid(902c91c2fe1b50343b95e76c5000e859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/PortalMaterialControl.cs using Guid(902c91c2fe1b50343b95e76c5000e859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e57e9602c974016c8706214cb87d77f') in 0.005072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003671 seconds.
+  path: Assets/XRI/Settings/XRInteractionEditorSettings.asset
+  artifactKey: Guid(40e4e6c0cc805a2418ae21857bede0ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XRI/Settings/XRInteractionEditorSettings.asset using Guid(40e4e6c0cc805a2418ae21857bede0ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fdd89a7c1fed30ead8260870d66d7b8') in 0.006324 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004686 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/References/RequiredReferences.cs
+  artifactKey: Guid(ef11afdbd8a2f34448943ffdea9943ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/References/RequiredReferences.cs using Guid(ef11afdbd8a2f34448943ffdea9943ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10ae87f68aa85e3cf273c1e71971c51a') in 0.005224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006981 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Standard
+  artifactKey: Guid(f6e8bb43ed322c1429ffc7216eb3d2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Standard using Guid(f6e8bb43ed322c1429ffc7216eb3d2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04748e5d3b67488070ed04de8ca38e3f') in 0.005280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000780 seconds.
+  path: Assets/Teleportals/Materials/Portal_04
+  artifactKey: Guid(3887a5de64fdb0449b558b8129e2950d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/Portal_04 using Guid(3887a5de64fdb0449b558b8129e2950d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e2c3b6223c2916250cf589166f39a78') in 0.005310 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.020075 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Scenes/New Terrain.asset
+  artifactKey: Guid(02bc0e2176f6a4e4ea3faf0c622664cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Scenes/New Terrain.asset using Guid(02bc0e2176f6a4e4ea3faf0c622664cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3ab6f534679e17cca3bc5b309a6a2a9') in 0.022385 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003388 seconds.
+  path: Assets/Teleportals/Scripts/StencilViewer.cs
+  artifactKey: Guid(bc41149246ad2a44dbb639f892e2c94e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/StencilViewer.cs using Guid(bc41149246ad2a44dbb639f892e2c94e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95f73a744a0472837ecf8f9d7c77c042') in 0.001656 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003688 seconds.
+  path: Assets/XR/Settings/Oculus Settings.asset
+  artifactKey: Guid(5add55016f311424280f080d439ee797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/Settings/Oculus Settings.asset using Guid(5add55016f311424280f080d439ee797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0e0e3ac1bc918735041863de4ea4483') in 0.017606 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004609 seconds.
+  path: Assets/XR/Settings/OpenXR Package Settings.asset
+  artifactKey: Guid(0a39fff19d427ac4188660864ee50511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/Settings/OpenXR Package Settings.asset using Guid(0a39fff19d427ac4188660864ee50511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cecb4269be7c520e8503a45d9a59fa41') in 0.016359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003373 seconds.
+  path: Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Left Controller.preset
+  artifactKey: Guid(ffd8268f7307a0c48a067dad4a8fe060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Samples/XR Interaction Toolkit/2.0.4/Starter Assets/XRI Default Left Controller.preset using Guid(ffd8268f7307a0c48a067dad4a8fe060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a07001ae576830c5bbc998033d3621c') in 0.008786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004210 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/StencilViewer/Stencil_Viewer.shader
+  artifactKey: Guid(3f7f728013663364e89a05329b48e06f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/StencilViewer/Stencil_Viewer.shader using Guid(3f7f728013663364e89a05329b48e06f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5acdb974faf2978021afd067a85f67d2') in 0.005536 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004446 seconds.
+  path: Assets/Teleportals/Shaders/CustomInternalShaders/ReadMe.rtf
+  artifactKey: Guid(81a6365885c9dbd489e28e3f066be360) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/CustomInternalShaders/ReadMe.rtf using Guid(81a6365885c9dbd489e28e3f066be360) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71f2aecddb531a06635d909ae1277320') in 0.010311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003450 seconds.
+  path: Assets/XR/Loaders/Mock HMD Loader.asset
+  artifactKey: Guid(605208de2a64f074a86ec44b4294af01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/Loaders/Mock HMD Loader.asset using Guid(605208de2a64f074a86ec44b4294af01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87c957e6325e12b0abce837512bca378') in 0.006317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004863 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Legacy/Stencil_Legacy_Normal-Diffuse.shader
+  artifactKey: Guid(a956924bd6a8ae44ca741bc69e575fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Legacy/Stencil_Legacy_Normal-Diffuse.shader using Guid(a956924bd6a8ae44ca741bc69e575fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72fd1cf2b8df6a3370ed84e6030ec5d7') in 0.006950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.025422 seconds.
+  path: Assets/Teleportals/Materials/New Render TextureR.renderTexture
+  artifactKey: Guid(1c70c7cd3d0ea864286e0637d8d34b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Materials/New Render TextureR.renderTexture using Guid(1c70c7cd3d0ea864286e0637d8d34b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b30eeded0344ee509a31d6889acec04') in 0.010156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011394 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Scenes/demoScene_freeSettings.lighting
+  artifactKey: Guid(05f2888b971c56c45ae25b1863eab845) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Scenes/demoScene_freeSettings.lighting using Guid(05f2888b971c56c45ae25b1863eab845) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: '24f1189176a75eb1e055c9e0d3b006ff') in 0.008851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.027335 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/Shared/Editor/BaseSupportWindow.cs
+  artifactKey: Guid(9cdf3bd7e11956f4d8523004bed5cbfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/Shared/Editor/BaseSupportWindow.cs using Guid(9cdf3bd7e11956f4d8523004bed5cbfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78afa1e9c7987b3f3f4e85b3ab2fe130') in 0.005473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004723 seconds.
+  path: Assets/Teleportals/Shaders/StencilShaders/Legacy/Stencil_Legacy_Normal-Spec.shader
+  artifactKey: Guid(503221137c9562542ab2f7d1359a97f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Shaders/StencilShaders/Legacy/Stencil_Legacy_Normal-Spec.shader using Guid(503221137c9562542ab2f7d1359a97f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e153154f546014785d81353828758c32') in 0.007417 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003148 seconds.
+  path: Assets/XR/Settings/OpenXR Editor Settings.asset
+  artifactKey: Guid(3935bfb4b7517c84eab048706d337bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/Settings/OpenXR Editor Settings.asset using Guid(3935bfb4b7517c84eab048706d337bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4f421c04edde574ddeadaa628e83967') in 0.006568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000983 seconds.
+  path: Assets/Teleportals/Prefabs
+  artifactKey: Guid(d7e2cc030bc175c408aee252f328165e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Prefabs using Guid(d7e2cc030bc175c408aee252f328165e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a44fd07607dfa5f8cd776d2cfa82470') in 0.002110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000927 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/References
+  artifactKey: Guid(ecd16c576c7d3b74797783bb42638043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/References using Guid(ecd16c576c7d3b74797783bb42638043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b46df157f6f6bccf40cf03b5fd9aeba4') in 0.004748 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003043 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Meshes/Source/grass01.FBX
+  artifactKey: Guid(4de33cfabd2a0a64caa7f20596f00adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Meshes/Source/grass01.FBX using Guid(4de33cfabd2a0a64caa7f20596f00adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be076a09b70f72d18423868919d71ac') in 0.013359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000799 seconds.
+  path: Assets/Fantasy Forest Environment Free Sample/Scenes
+  artifactKey: Guid(62872d07d188c1c40b0a8f51ce5f5d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Forest Environment Free Sample/Scenes using Guid(62872d07d188c1c40b0a8f51ce5f5d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9257aa50c74e2cf23d3e7a3a5ef5f71') in 0.005293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004778 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/Shared/Editor/Definer.cs
+  artifactKey: Guid(2014518b6b8e66441a0ebaab1d1358aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/Shared/Editor/Definer.cs using Guid(2014518b6b8e66441a0ebaab1d1358aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c28fda22abcacd62e3156d9192b55302') in 0.001758 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003682 seconds.
+  path: Assets/Teleportals/Scripts/CanvasMenuSupport.cs
+  artifactKey: Guid(8fc30b3b1f05f2445a9a269ff94dbbb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/CanvasMenuSupport.cs using Guid(8fc30b3b1f05f2445a9a269ff94dbbb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '653844495a66576167598c33861f1501') in 0.005221 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004016 seconds.
+  path: Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/References/References.asset
+  artifactKey: Guid(3d6785e46e940b843aa5fbe4ca729d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Plugins/Rotary Heart/SerializableDictionaryLite/References/References.asset using Guid(3d6785e46e940b843aa5fbe4ca729d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d08ec4e9653a0e10e6932a25c0edee3') in 0.002424 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003306 seconds.
+  path: Assets/Teleportals/Scripts/PositionInDirectionOfTeleport.cs
+  artifactKey: Guid(68efc37abe6d39b499932220b4e72238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/PositionInDirectionOfTeleport.cs using Guid(68efc37abe6d39b499932220b4e72238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9619a14a70ef0eda1de4c76f90c790e4') in 0.005128 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001114 seconds.
+  path: Assets/XR/Loaders
+  artifactKey: Guid(77f18e79a6e3c1c4795f049142db5342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/Loaders using Guid(77f18e79a6e3c1c4795f049142db5342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c1e0dd099258a06e581cdb1ba7942c3') in 0.005040 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013666 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:296 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:281 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <75633565436c42f0a6426b33f0132ade>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <75633565436c42f0a6426b33f0132ade>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <75633565436c42f0a6426b33f0132ade>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <11d97693183d4a6bb35c29ae7882c66b>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.311 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1311ms)
+		BeginReloadAssembly (172ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (61ms)
+		EndReloadAssembly (1039ms)
+			LoadAssemblies (123ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (331ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (495ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (275ms)
+				ProcessInitializeOnLoadMethodAttributes (71ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.87 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 5758 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 49 unused Assets / (312.0 KB). Loaded Objects now: 6304.
+Memory consumption went from 231.5 MB to 231.2 MB.
+Total: 4.177700 ms (FindLiveObjects: 0.395800 ms CreateObjectMapping: 0.345000 ms MarkObjects: 3.359300 ms  DeleteObjects: 0.076800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013355 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:296 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:281 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <75633565436c42f0a6426b33f0132ade>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <75633565436c42f0a6426b33f0132ade>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <75633565436c42f0a6426b33f0132ade>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <11d97693183d4a6bb35c29ae7882c66b>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.285 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1286ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1034ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (342ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (487ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (39ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (276ms)
+				ProcessInitializeOnLoadMethodAttributes (71ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.31 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 5758 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 49 unused Assets / (309.9 KB). Loaded Objects now: 6308.
+Memory consumption went from 231.5 MB to 231.2 MB.
+Total: 4.455200 ms (FindLiveObjects: 0.399400 ms CreateObjectMapping: 0.331100 ms MarkObjects: 3.646800 ms  DeleteObjects: 0.077200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012249 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.85 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:296 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:281 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <75633565436c42f0a6426b33f0132ade>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <75633565436c42f0a6426b33f0132ade>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <75633565436c42f0a6426b33f0132ade>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <11d97693183d4a6bb35c29ae7882c66b>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.282 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1283ms)
+		BeginReloadAssembly (142ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1032ms)
+			LoadAssemblies (118ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (335ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (488ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (38ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (270ms)
+				ProcessInitializeOnLoadMethodAttributes (79ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.00 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 5758 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 49 unused Assets / (310.0 KB). Loaded Objects now: 6312.
+Memory consumption went from 231.5 MB to 231.2 MB.
+Total: 4.424000 ms (FindLiveObjects: 0.444100 ms CreateObjectMapping: 0.375500 ms MarkObjects: 3.516600 ms  DeleteObjects: 0.086900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012416 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:296 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\GitHub\portal_locomotion\Library\PackageCache\com.unity.xr.oculus@3.2.2\Runtime\OculusLoader.cs:281 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <75633565436c42f0a6426b33f0132ade>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <75633565436c42f0a6426b33f0132ade>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <75633565436c42f0a6426b33f0132ade>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <11d97693183d4a6bb35c29ae7882c66b>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.257 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1258ms)
+		BeginReloadAssembly (135ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1030ms)
+			LoadAssemblies (111ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (302ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (519ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (37ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (90ms)
+				ProcessInitializeOnLoadAttributes (289ms)
+				ProcessInitializeOnLoadMethodAttributes (92ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 8.11 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 5758 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 49 unused Assets / (312.0 KB). Loaded Objects now: 6316.
+Memory consumption went from 231.5 MB to 231.2 MB.
+Total: 5.247000 ms (FindLiveObjects: 0.517700 ms CreateObjectMapping: 0.360100 ms MarkObjects: 4.263500 ms  DeleteObjects: 0.104500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1994.143015 seconds.
+  path: Assets/Teleportals/Prefabs/XR Origin.prefab
+  artifactKey: Guid(43d6d3b7f32bca540b5926e4e6392f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Prefabs/XR Origin.prefab using Guid(43d6d3b7f32bca540b5926e4e6392f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f595d08c498aec43b4dc928483e0917') in 0.052146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.012573 seconds.
+  path: Assets/Teleportals/Scripts/RightHandRaycast.cs
+  artifactKey: Guid(8db9342d5cc7e0b4f86a417f1f20c825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Teleportals/Scripts/RightHandRaycast.cs using Guid(8db9342d5cc7e0b4f86a417f1f20c825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1782d1156bdfa8dd14c6dc004de850b9') in 0.005547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.149611 seconds.
+  path: ProjectSettings/AudioManager.asset
+  artifactKey: Guid(00000000000000006000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/AudioManager.asset using Guid(00000000000000006000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdbddf48c8c3e219c149a63caed2544b') in 0.007153 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: ProjectSettings/EditorSettings.asset
+  artifactKey: Guid(0000000000000000c000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/EditorSettings.asset using Guid(0000000000000000c000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eb301141f39c636f8f2818f7c2508cd') in 0.008676 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005597 seconds.
+  path: ProjectSettings/InputManager.asset
+  artifactKey: Guid(00000000000000002000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/InputManager.asset using Guid(00000000000000002000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc199788daedf4920e8a4581e7aa9d0f') in 0.007441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9db8e23057972737adfd4cf928b01efc') in 0.009893 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: ProjectSettings/NavMeshAreas.asset
+  artifactKey: Guid(00000000000000004100000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/NavMeshAreas.asset using Guid(00000000000000004100000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b3a034a6c9ba849294d0362d48e38b7') in 0.009432 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: ProjectSettings/MemorySettings.asset
+  artifactKey: Guid(0000000000000000f100000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/MemorySettings.asset using Guid(0000000000000000f100000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '457b2c893c18e5a912f58005cc3b35ec') in 0.006416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: ProjectSettings/EditorBuildSettings.asset
+  artifactKey: Guid(0000000000000000b000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/EditorBuildSettings.asset using Guid(0000000000000000b000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bb41953f08d006138a44f810c88017c') in 0.006345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: ProjectSettings/QualitySettings.asset
+  artifactKey: Guid(00000000000000009000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/QualitySettings.asset using Guid(00000000000000009000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64a26af360805779d32a50c0d478dda8') in 0.007110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: ProjectSettings/TimeManager.asset
+  artifactKey: Guid(00000000000000007000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TimeManager.asset using Guid(00000000000000007000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c1fbb6135d72e59ae9b24c9172a0e91') in 0.007914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: ProjectSettings/GraphicsSettings.asset
+  artifactKey: Guid(00000000000000006100000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/GraphicsSettings.asset using Guid(00000000000000006100000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57f48c42a4399d43d0d0344b1b047998') in 0.006149 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
