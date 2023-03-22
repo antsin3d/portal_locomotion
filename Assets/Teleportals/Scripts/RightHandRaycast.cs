@@ -59,9 +59,7 @@ namespace teleportals
 		private Quaternion portalStartRotation;
 		
 		private bool isAnimating = false;
-		float teleportDistance;
-		private string hmdName;
-		
+		private float teleportDistance;
 		
 		public SpeedOption portalSpeed = SpeedOption.Default;
 		private float portalQuadWidth;
@@ -99,7 +97,7 @@ namespace teleportals
 		float scaleFactor;
 		float scaleFactorWidth;
 		float scaleFactorHeight;
-		
+		private Transform leftEyeParent;
 		private void Start()
 			{
 				SetSpeedValues();
@@ -204,10 +202,13 @@ namespace teleportals
 				}
 				//checking the *actual* offset of the player cameras
 				leftCameraPosition = InputTracking.GetLocalPosition(XRNode.LeftEye);
+				Debug.Log(leftCameraPosition);
 				rightCameraPosition = InputTracking.GetLocalPosition(XRNode.RightEye);
+				Debug.Log(rightCameraPosition);
 				leftCameraRotation = InputTracking.GetLocalRotation(XRNode.LeftEye);
 				rightCameraRotation = InputTracking.GetLocalRotation(XRNode.RightEye);
-
+				//leftEyeParent = leftCameraPosition.parent;
+				//Debug.Log(leftEyeParent);
 				// // Attach the following 4 lines of code to the objects themselves if you want to optimize. Left here for learning purposes
 				//have spawned cameras follow the relative position and rotation of the playercameras
 				portalCameraL.transform.localPosition = leftCameraPosition;
@@ -219,36 +220,25 @@ namespace teleportals
 				Vector3 portalQuadForwardOffsetL = leftCameraRotation * Vector3.forward;
 				Vector3 newPortalQuadPositionL = leftCameraPosition + portalQuadForwardOffsetL * portalQuadsDistance;
 				portalMeshL.transform.localPosition = newPortalQuadPositionL;
+				portalMeshL.transform.localRotation = leftCameraRotation;
+
 				Vector3 portalQuadForwardOffsetR = rightCameraRotation * Vector3.forward;
 				Vector3 newPortalQuadPositionR = rightCameraPosition + portalQuadForwardOffsetR * portalQuadsDistance;
 				portalMeshR.transform.localPosition = newPortalQuadPositionR;
-
-				portalMeshL.transform.localRotation = leftCameraRotation;
 				portalMeshR.transform.localRotation = rightCameraRotation;
 
 				List<XRNodeState> nodeStates = new List<XRNodeState>();
 				InputTracking.GetNodeStates(nodeStates);
 
-				//Debug.Log("Connected VR headset: " + SystemInfo.deviceModel);
-				Debug.Log("Eye Texture Width: " + XRSettings.eyeTextureWidth);
-				Debug.Log("Eye Texture Height: " + XRSettings.eyeTextureHeight);
 				float renderScale = XRSettings.eyeTextureResolutionScale;
 				playerFOVL = playerCameraComponentL.fieldOfView;
 				playerFOVR = playerCameraComponentR.fieldOfView;
-				//Debug.Log("Vertical FOV: " + playerFOVL);
 				portalCameraComponentL.fieldOfView = playerFOVL;
 				portalCameraComponentR.fieldOfView = playerFOVR;
 				float aspectRatioL = playerCameraComponentL.aspect;
 				float aspectRatioR = playerCameraComponentR.aspect;
-				//Debug.Log("Aspect Ratio: " + aspectRatioL.ToString("F5"));
 				float horizontalFOVL = 2 * Mathf.Atan(Mathf.Tan(playerFOVL * Mathf.Deg2Rad / 2) * aspectRatioL) * Mathf.Rad2Deg;
 				float horizontalFOVR = 2 * Mathf.Atan(Mathf.Tan(playerFOVR * Mathf.Deg2Rad / 2) * aspectRatioR) * Mathf.Rad2Deg;
-				Debug.Log("Left eye Local Position unity: " + playerCamera.localPosition.ToString("F5"));
-				//Debug.Log("Right eye Local Position unity: " + playerCameraR.localPosition.ToString("F5"));
-				//Debug.Log("Left eye Local Position XR: " + leftCameraPosition.ToString("F5"));
-				//Debug.Log("Right eye Local Position XR: " + rightCameraPosition.ToString("F5"));
-				//Debug.Log("Left Portal Camera Local Position: " + portalCameraL.transform.localPosition.ToString("F5"));
-				Debug.Log("Right Portal Camera Local Position: " + portalCameraR.transform.localPosition.ToString("F5"));
 
 				float frustumHeightL = 2.0f * Mathf.Tan(playerFOVL * 0.5f * Mathf.Deg2Rad);
 				float frustumWidthL = frustumHeightL * aspectRatioL;
@@ -273,13 +263,10 @@ namespace teleportals
 
 				// Calculate the screen's diagonal length
 				scaleFactor = Mathf.Sqrt(XRSettings.eyeTextureWidth * XRSettings.eyeTextureWidth + XRSettings.eyeTextureHeight * XRSettings.eyeTextureHeight);
-				Debug.Log("Scale Factor: " + scaleFactor);
+
 				// Determine the final width and height of the disc
 				finalDiscWidth = scaleFactor * aspectRatioL;
-				finalDiscHeight = scaleFactor;
-				Debug.Log("Final Disc Width: " + finalDiscWidth);
-				Debug.Log("Final Disc Height: " + finalDiscHeight);
-				
+				finalDiscHeight = scaleFactor;				
 
 				//ensure the raycast only hits world objects and not the portal objects
 				int layerMask = 1 << LayerMask.NameToLayer("TestLayer");
