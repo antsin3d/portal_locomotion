@@ -25,7 +25,6 @@ Shader "Stencils/UnlitStencilShader"
 {
     Properties
     {
-        _Color ("Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _StencilReferenceID("Stencil ID Reference", Float) = 1
         [Enum(UnityEngine.Rendering.CompareFunction)] _StencilComp("Stencil Comparison", Float) = 3
@@ -38,8 +37,8 @@ Shader "Stencils/UnlitStencilShader"
     {
         Tags
         {
-            "Queue"             = "Geometry"
-            "RenderType"        = "StencilOpaque"
+            "Queue"             = "Transparent"
+            "RenderType"        = "Transparent"
         }
 
         LOD 200
@@ -53,13 +52,32 @@ Shader "Stencils/UnlitStencilShader"
             WriteMask[_StencilWriteMask]
         }
 
+        CGPROGRAM
+        #pragma surface surf Lambert
+
+        sampler2D _MainTex;
+
+        struct Input
+        {
+            float2 uv_MainTex;
+        };
+
+        void surf (Input IN, inout SurfaceOutput o)
+        {
+            fixed4 c = tex2D(_MainTex, IN.uv_MainTex);
+            o.Albedo = c.rgb;
+            o.Alpha = c.a;
+        }
+        ENDCG
+
         Pass
         {
+            ZWrite Off
+            Blend SrcAlpha OneMinusSrcAlpha
+
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-
-            // Use shader model 3.0 target, to get nicer looking lighting
             #pragma target 3.0
 
             sampler2D _MainTex;
@@ -73,25 +91,20 @@ Shader "Stencils/UnlitStencilShader"
             struct v2f
             {
                 float2 uv : TEXCOORD0;
-
                 float4 vertex : SV_POSITION;
             };
-
-            fixed4 _Color;
 
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
-
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                // Albedo comes from a texture tinted by color
-                fixed4 c = tex2D (_MainTex, i.uv) * _Color;
+                fixed4 c = tex2D(_MainTex, i.uv);
                 return c;
             }
             ENDCG

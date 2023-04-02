@@ -23,6 +23,7 @@ namespace teleportals
 		public Transform portalParentR;
 		private Quaternion portalCamInitialRotationL;
 		private Quaternion portalCamInitialRotationR;
+		public Transform cameraOffsetTransform;
 		public Transform player;
 		public Transform rightHand;
 		public Transform objectToAnimateL;
@@ -40,7 +41,8 @@ namespace teleportals
 		private Vector3 portalDiscEndWidth;
 		private Vector3 portalDiscEndHeight;
 		private Vector3 startScale;
-		
+		private Vector3 newObjectToAnimatePositionL;
+		private Vector3 newObjectToAnimatePositionR;
 		private float animationDuration;
 		private float animationDurationClose;
 		private float animationDurationMid;
@@ -56,7 +58,8 @@ namespace teleportals
 		private Vector3 initialPortalParentPositionR;
 		private Quaternion portalRotationLockL;
 		private Quaternion portalRotationLockR;
-		private Quaternion portalStartRotation;
+		private Quaternion portalStartRotationL;
+		private Quaternion portalStartRotationR;
 		
 		private bool isAnimating = false;
 		private float teleportDistance;
@@ -85,12 +88,12 @@ namespace teleportals
 		private bool vrDeviceLoaded = false;
 
 		// Set the distance from the camera to the quad
-		float portalQuadsDistance = 1f;
+		private float portalQuadsDistance = 1f;
 		
 		public RenderTexture renderTextureL;
 		public RenderTexture renderTextureR;
-		public int renderTextureWidth;
-		public int renderTextureHeight;
+		private int renderTextureWidth;
+		private int renderTextureHeight;
 		private bool hasCreatedRenderTexture = false;
 		float finalDiscWidth;
 		float finalDiscHeight;
@@ -98,6 +101,12 @@ namespace teleportals
 		float scaleFactorWidth;
 		float scaleFactorHeight;
 		private Transform leftEyeParent;
+		private Transform rightEyeParent;
+		private Vector3 portalStartPosL;
+		private Quaternion portalStartRotL;
+		private Vector3 portalStartPosR;
+		private Quaternion portalStartRotR;
+
 		private void Start()
 			{
 				SetSpeedValues();
@@ -105,7 +114,8 @@ namespace teleportals
 				//save spawned portal camera rotation
 				portalCamInitialRotationL = portalCameraL.transform.rotation;
 				portalCamInitialRotationR = portalCameraR.transform.rotation;
-				portalStartRotation = portalParentL.localRotation;
+				portalStartRotationL = portalParentL.rotation;
+				portalStartRotationR = portalParentR.rotation;
 				initialPortalParentRotationL = portalParentL.rotation;
 				initialPortalParentRotationR = portalParentR.rotation;
 				initialPortalParentPositionL = portalParentL.position;
@@ -200,21 +210,31 @@ namespace teleportals
 					CreateAndAssignRenderTexture();
 					hasCreatedRenderTexture = true;
 				}
-				//checking the *actual* offset of the player cameras
+				//checking the *actual* local offset of the player cameras
 				leftCameraPosition = InputTracking.GetLocalPosition(XRNode.LeftEye);
-				Debug.Log(leftCameraPosition);
+				//Debug.Log(leftCameraPosition);
 				rightCameraPosition = InputTracking.GetLocalPosition(XRNode.RightEye);
-				Debug.Log(rightCameraPosition);
+				//Debug.Log(rightCameraPosition);
 				leftCameraRotation = InputTracking.GetLocalRotation(XRNode.LeftEye);
 				rightCameraRotation = InputTracking.GetLocalRotation(XRNode.RightEye);
-				//leftEyeParent = leftCameraPosition.parent;
-				//Debug.Log(leftEyeParent);
-				// // Attach the following 4 lines of code to the objects themselves if you want to optimize. Left here for learning purposes
+
+				// Get world position and rotation of XRNode camera
+				Vector3 leftCameraWorldPosition = cameraOffsetTransform.TransformPoint(leftCameraPosition);
+				Quaternion leftCameraWorldRotation = cameraOffsetTransform.rotation * leftCameraRotation;
+				Vector3 rightCameraWorldPosition = cameraOffsetTransform.TransformPoint(rightCameraPosition);
+				Quaternion rightCameraWorldRotation = cameraOffsetTransform.rotation * rightCameraRotation;
+
 				//have spawned cameras follow the relative position and rotation of the playercameras
 				portalCameraL.transform.localPosition = leftCameraPosition;
-				portalCameraL.transform.localRotation = playerCamera.localRotation;
+				portalCameraL.transform.localRotation = leftCameraRotation;
 				portalCameraR.transform.localPosition = rightCameraPosition;
-				portalCameraR.transform.localRotation = playerCameraR.localRotation;
+				portalCameraR.transform.localRotation = rightCameraRotation;
+
+				// Update Main Camera position and rotation to match XRNode
+				playerCamera.transform.localPosition = leftCameraPosition;
+				playerCamera.transform.localRotation = leftCameraRotation;
+				playerCameraR.transform.localPosition = rightCameraPosition;
+				playerCameraR.transform.localRotation = rightCameraRotation;
 
 				//position portal quads
 				Vector3 portalQuadForwardOffsetL = leftCameraRotation * Vector3.forward;
@@ -226,10 +246,9 @@ namespace teleportals
 				Vector3 newPortalQuadPositionR = rightCameraPosition + portalQuadForwardOffsetR * portalQuadsDistance;
 				portalMeshR.transform.localPosition = newPortalQuadPositionR;
 				portalMeshR.transform.localRotation = rightCameraRotation;
-
+				///////Set up scaling for portals based on headset
 				List<XRNodeState> nodeStates = new List<XRNodeState>();
 				InputTracking.GetNodeStates(nodeStates);
-
 				float renderScale = XRSettings.eyeTextureResolutionScale;
 				playerFOVL = playerCameraComponentL.fieldOfView;
 				playerFOVR = playerCameraComponentR.fieldOfView;
@@ -239,31 +258,23 @@ namespace teleportals
 				float aspectRatioR = playerCameraComponentR.aspect;
 				float horizontalFOVL = 2 * Mathf.Atan(Mathf.Tan(playerFOVL * Mathf.Deg2Rad / 2) * aspectRatioL) * Mathf.Rad2Deg;
 				float horizontalFOVR = 2 * Mathf.Atan(Mathf.Tan(playerFOVR * Mathf.Deg2Rad / 2) * aspectRatioR) * Mathf.Rad2Deg;
-
 				float frustumHeightL = 2.0f * Mathf.Tan(playerFOVL * 0.5f * Mathf.Deg2Rad);
 				float frustumWidthL = frustumHeightL * aspectRatioL;
-				//Debug.Log("Frustum size at 1m distance: Width = " + frustumWidthL.ToString("F5") + ", Height = " + frustumHeightL.ToString("F5"));
 				float frustumHeightR = 2.0f * Mathf.Tan(playerFOVR * 0.5f * Mathf.Deg2Rad);
 				float frustumWidthR = frustumHeightR * aspectRatioR;
-
 				Vector3 newScaleL = new Vector3(2f * frustumWidthL, frustumHeightL, 1f);
 				portalMeshL.transform.localScale = newScaleL;
 				Vector3 newScaleR = new Vector3(2f * frustumWidthR, frustumHeightR, 1f);
 				portalMeshR.transform.localScale = newScaleR;
-
 				// Calculate the frustum height at the given distance
 				float frustumHeight = 2.0f * portalDiscDistance * Mathf.Tan(playerFOVL * 0.5f * Mathf.Deg2Rad);
-
 				// Calculate the frustum width at the given distance
 				float frustumWidth = frustumHeight * aspectRatioL;
-
 				// Divide the frustum width and height by the disc's dimensions (1m x 1m)
 				scaleFactorWidth = frustumWidth / 1f;
 				scaleFactorHeight = frustumHeight / 1f;
-
 				// Calculate the screen's diagonal length
 				scaleFactor = Mathf.Sqrt(XRSettings.eyeTextureWidth * XRSettings.eyeTextureWidth + XRSettings.eyeTextureHeight * XRSettings.eyeTextureHeight);
-
 				// Determine the final width and height of the disc
 				finalDiscWidth = scaleFactor * aspectRatioL;
 				finalDiscHeight = scaleFactor;				
@@ -274,43 +285,29 @@ namespace teleportals
 
 				// Calculate the midpoint between the two cameras
 				Vector3 midpoint = (playerCamera.position + playerCameraR.position) / 2;
-				
 				// Set the position of the object to the midpoint between the two player cameras
 				playerCameraCenter.position = midpoint;
-				// // if isanimating return
+
 			if (Physics.Raycast(rightHand.position, rightHand.forward, out hit, maxDistance, layerMask))
 				{
 					//before pressing 'fire' key:
 					if (isAnimating == false)
 					{
-					hitPoint = hit.point;
-					portalCameraParent.position = hitPoint;
-					
-					// Calculate the direction from the camera to the hitpoint to position mask objects starting position
-					Vector3 direction = hitPoint - playerCamera.position;
-					Vector3 directionR = hitPoint - playerCameraR.position;
-					Vector3 camToHit = hitPoint - playerCamera.position;
-					Vector3 objectPos = playerCamera.position + camToHit.normalized * portalDiscDistance;
-					portalParentL.position = objectPos;
-					portalParentL.LookAt(hitPoint);
-					Vector3 camToHitR = hitPoint - playerCameraR.position;
-					Vector3 objectPosR = playerCameraR.position + camToHit.normalized * portalDiscDistance;
-					portalParentR.position = objectPosR;
-					portalParentR.LookAt(hitPoint);
-					
-					//rotate the camera center to stay in line with the two cameras
-					Quaternion rotation = Quaternion.Lerp(playerCamera.rotation, playerCameraR.rotation, 0.5f);
-					playerCameraCenter.rotation = rotation;
-					
-					//copy the z-axis rotation of playerCameraCenter to portalParentL 
-					Quaternion currentRotation = portalParentL.rotation;
-					Quaternion targetRotation = playerCameraCenter.rotation;
-					portalParentL.rotation = Quaternion.Euler(currentRotation.eulerAngles.x, currentRotation.eulerAngles.y, targetRotation.eulerAngles.z);
-
-					Quaternion currentRotationR = portalParentR.rotation;
-					Quaternion targetRotationR = playerCameraCenter.rotation;
-					portalParentR.rotation = Quaternion.Euler(currentRotationR.eulerAngles.x, currentRotationR.eulerAngles.y, targetRotationR.eulerAngles.z);
-					
+						hitPoint = hit.point;
+						portalCameraParent.position = hitPoint;
+						Vector3 direction = hitPoint - playerCamera.position;
+						Vector3 directionR = hitPoint - playerCameraR.position;
+						Vector3 camToHit = hitPoint - playerCamera.position;
+						Vector3 objectPos = playerCamera.position + camToHit.normalized * portalDiscDistance;
+						Vector3 objectPosR = playerCameraR.position + camToHit.normalized * portalDiscDistance;
+						// position values to use in animation
+						portalStartPosL = objectPos;
+						portalStartPosR = objectPosR;
+						// rotation values to use in animation
+						Quaternion lookAtRotationL = Quaternion.LookRotation(hitPoint - objectPos, Vector3.up);
+						Quaternion lookAtRotationR = Quaternion.LookRotation(hitPoint - objectPosR, Vector3.up);
+						portalStartRotL = Quaternion.LookRotation(lookAtRotationL * -Vector3.forward, lookAtRotationL * Vector3.up);
+						portalStartRotR = Quaternion.LookRotation(lookAtRotationR * -Vector3.forward, lookAtRotationR * Vector3.up);
 					}
 				}
 			
@@ -322,17 +319,18 @@ namespace teleportals
 					isAnimating = true;
 					hitPointLock = hitPoint;
 					portalCameraParent.position = hitPointLock;
-					portalRotationLockL = portalParentL.localRotation;
-					portalRotationLockR = portalParentR.localRotation;
+					portalRotationLockL = portalParentL.rotation;
+					portalRotationLockR = portalParentR.rotation;
+
 					//in the future I'll derive these distance values as a % of your max distance
 					teleportDistance = Vector3.Distance(player.position, hitPoint);
-					if (teleportDistance > 10){
+					if (teleportDistance > maxDistance*0.33f){
 						animationDuration = animationDurationMid;
 					}
-					if (teleportDistance > 20) {
+					if (teleportDistance > maxDistance*0.66f) {
 						animationDuration = animationDurationFar;
 					}
-					if (teleportDistance < 10) {
+					if (teleportDistance < maxDistance*0.33f) {
 						animationDuration = animationDurationClose;
 					}
 					//show portal objects
@@ -340,6 +338,7 @@ namespace teleportals
 					portalMeshR.SetActive(true);
 					portalMeshStencilL.SetActive(true);
 					portalMeshStencilR.SetActive(true);
+					//Debug.Log("portal centering on fire" + newObjectToAnimatePositionL);
 					StartCoroutine(AnimateObject());
 				}
 			}
@@ -347,33 +346,49 @@ namespace teleportals
 
 		IEnumerator AnimateObject()
 		{
+			isAnimating = true;
 			if (animationDuration <= 0)
-		{
-			Debug.LogError("Animation duration must be greater than 0");
-			yield break;
-		}
+			{
+				Debug.LogError("Animation duration must be greater than 0");
+				yield break;
+			}
 			Vector3 endScale = new Vector3(scaleFactorWidth, scaleFactorHeight, 1f);
 
 			float startTime = Time.time;
 			while (Time.time < startTime + animationDuration)
 			{
+				//update final positioning of disc at end of animation
+				Vector3 objectToAnimateForwardOffsetL = playerCamera.transform.forward;
+				newObjectToAnimatePositionL = playerCamera.transform.position + objectToAnimateForwardOffsetL * portalDiscDistance;
+				Quaternion tempRotationL = playerCamera.transform.rotation;
+
+				Vector3 objectToAnimateForwardOffsetR = playerCameraR.transform.forward;
+				newObjectToAnimatePositionR = playerCameraR.transform.position + objectToAnimateForwardOffsetR * portalDiscDistance;
+				Quaternion tempRotationR = playerCameraR.transform.rotation;
+				// Flip the forward direction of portalParentL by negating the forward vector
+				portalStartRotationL = Quaternion.LookRotation(-playerCamera.transform.forward, playerCamera.transform.up);
+				portalStartRotationR = Quaternion.LookRotation(-playerCameraR.transform.forward, playerCameraR.transform.up);
 				float timePassed = Time.time - startTime;
 				float proportionComplete = timePassed / animationDuration;
 
 				objectToAnimateL.localScale = Vector3.Lerp(startScale, endScale, proportionComplete);
 				objectToAnimateR.localScale = Vector3.Lerp(startScale, endScale, proportionComplete);
-				portalParentL.localRotation = Quaternion.Lerp(portalRotationLockL, portalStartRotation, proportionComplete);
-				portalParentR.localRotation = Quaternion.Lerp(portalRotationLockR, portalStartRotation, proportionComplete);
+				portalParentL.position = Vector3.Lerp(portalStartPosL, newObjectToAnimatePositionL, proportionComplete);
+				portalParentL.rotation = Quaternion.Lerp(portalStartRotL, portalStartRotationL, proportionComplete);
+				portalParentR.position = Vector3.Lerp(portalStartPosR, newObjectToAnimatePositionR, proportionComplete);
+				portalParentR.rotation = Quaternion.Lerp(portalStartRotR, portalStartRotationR, proportionComplete);
+
 				yield return null;
 			}
 			objectToAnimateL.localScale = endScale;
 			objectToAnimateR.localScale = endScale;
-			portalParentL.rotation = portalStartRotation;
-			portalParentR.rotation = portalStartRotation;
+			portalParentL.position = newObjectToAnimatePositionL;
+			portalParentL.rotation = portalStartRotationL;
+			portalParentR.position = newObjectToAnimatePositionR;
+			portalParentR.rotation = portalStartRotationR;
 			TeleportPlayer();
 		}
-		
-		
+
 		private void TeleportPlayer()
 		{
 			player.position = hitPointLock;
