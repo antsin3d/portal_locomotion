@@ -152,7 +152,7 @@ Library: lib_burst_generated
 --output=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.XR.Interaction.Toolkit.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
---root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Assembly-CSharp-firstpass.dll
+--root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.Runtime.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.Services.Core.Telemetry.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.InputSystem.dll
@@ -168,7 +168,6 @@ Library: lib_burst_generated
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.XR.CoreUtils.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.dll
---root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
@@ -352,7 +351,7 @@ Library: lib_burst_generated
 --output=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.XR.Interaction.Toolkit.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
---root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Assembly-CSharp-firstpass.dll
+--root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.Runtime.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.Services.Core.Telemetry.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.InputSystem.dll
@@ -368,7 +367,6 @@ Library: lib_burst_generated
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.XR.CoreUtils.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.dll
---root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=D:\GitHub\portal_locomotion\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
